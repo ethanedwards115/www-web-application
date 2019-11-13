@@ -1,13 +1,13 @@
 .navbar .navbar-expand-lg .navbar-light .bg-light {
   position: fixed;
-  }
+}
 
-  .footer {
+.footer {
   position: fixed;
   left: 0;
   bottom: 0;
   width: 100%;
-  background-color: red;
+  background-color: #56CC9D;
   color: white;
   text-align: center;
 }
