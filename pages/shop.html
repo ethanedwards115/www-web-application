@@ -6,6 +6,10 @@
   <link rel="stylesheet" href="../css/bootstrap.css">
   <link rel="stylesheet" href="../css/master.css">
 
+  <!-- Mapbox -->
+  <script src='https://api.mapbox.com/mapbox-gl-js/v1.4.1/mapbox-gl.js'></script>
+  <link href='https://api.mapbox.com/mapbox-gl-js/v1.4.1/mapbox-gl.css' rel='stylesheet' />
+
   <title>The Little Green Larder</title>
 </head>
 
@@ -38,11 +42,27 @@
     </div>
   </nav>
 
+  <main>
+    <h1>Welcome to The Little Green Larder Shop</h1>
+    <h3>We are here:</h3>
+    <div id='map' style='width: 400px; height: 300px;'></div>
+
+  </main>
+
   <footer>
     <div class="footer">
       <p>Follow the Little Green Larder on social media</p>
     </div>
   </footer>
+
+  <!-- Script for map -->
+  <script>
+    mapboxgl.accessToken = 'pk.eyJ1IjoiYXJjZmVqIiwiYSI6ImNrMnhoazQyeDBicmYzYnBkbHF0cXp2anYifQ.esr-RTeyjx4JbwgctD1ykA';
+    var map = new mapboxgl.Map({
+      container: 'map',
+      style: 'mapbox://styles/mapbox/streets-v11'
+    });
+  </script>
 </body>
 
 </html>
