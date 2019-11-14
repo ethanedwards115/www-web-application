@@ -11,3 +11,19 @@
   color: white;
   text-align: center;
 }
+
+.fab {
+ color: #FFFFFF;
+}
+
+.fa-facebook-square {
+  color: #3B5998;
+}
+
+.fab:hover {
+  color: #CCCCCC;
+}
+
+.fa-facebook-square:hover {
+  color: #8B9DC3;
+}
