@@ -27,3 +27,25 @@
 .fa-facebook-square:hover {
   color: #8B9DC3;
 }
+
+#homeBackground {
+  background-color: #56CC9D;
+}
+
+#homeHeading {
+  color: black;
+  text-align: center;
+  padding-top: 20px;
+  font-size: 60px;
+}
+
+.card {
+  margin-left: 150px;
+  margin-right: 150px;
+  display: inline-block;
+  height: 700px;
+}
+
+#greenCard {
+  float: right;
+}
