@@ -1,15 +1,40 @@
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+}
+
+#homeHeading {
+  color: black;
+  text-align: center;
+  padding-top: 20px;
+  font-size: 60px;
+}
+
 .navbar .navbar-expand-lg .navbar-light .bg-light {
   position: fixed;
 }
 
+main {
+  flex: 1 0 auto;
+  background-color: #56CC9D;
+}
+
 .footer {
-  position: fixed;
+  flex-shrink: 0;
   left: 0;
   bottom: 0;
   width: 100%;
   background-color: #56CC9D;
   color: white;
   text-align: center;
+}
+
+.card {
+  height: 600px;
+  max-width: 400px;
+  margin: 0 auto;
 }
 
 .fab {
@@ -27,78 +52,3 @@
 .fa-facebook-square:hover {
   color: #8B9DC3;
 }
-
-#homeBackground {
-  background-color: #56CC9D;
-  height: auto;
-}
-
-#homeHeading {
-  color: black;
-  text-align: center;
-  padding-top: 20px;
-  font-size: 60px;
-}
-
-.container {
-  width: 900px;
-}
-
-/* @media (min-width: 576px) {
-  .card {
-    margin-left: 100px;
-    margin-right: 100px;
-    margin-bottom: 50px;
-    display: inline-block;
-    height: 600px;
-    width: 400px;
-  }
-
-  #greenCard {}
-
-  .card-container {
-    margin: auto;
-    width: 60%;
-  }
-}
-
-@media (min-width: 1024px) {
-  .card {
-    display: inline-block;
-    margin-left: 100px;
-    margin-right: 100px;
-    margin-bottom: 50px;
-    height: 600px;
-    width: 400px;
-  }
-
-  #greenCard {
-
-  }
-
-/*  .card-container {
-    margin: auto;
-    width: 60%;
-  } */
-/* } */ 
-
-/* @media (min-width: 1440px) { */
-  .card {
-    margin-left: 100px;
-    margin-right: 100px;
-    margin-bottom: 100px;
-    display: inline-block;
-    height: 600px;
-    width: 400px;
-  }
-
-  #greenCard {
-    float: right;
-  }
-
-  .card-container {
-    margin: auto;
-    width: 50%;
-
-  }
-/* } */
