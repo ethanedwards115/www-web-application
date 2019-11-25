@@ -12,10 +12,26 @@
   text-align: center;
 }
 
+#map {
+  height: 400px;
+  width: 100%
+}
+
 .marker {
-  background-size: cover;
-  width: 150px;
-  height: 150px;
-  border-radius: 50%;
+  background-image: url('../img/marker.png');
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 50px;
+  height: 50px;
   cursor: pointer;
+}
+
+.mapboxgl-popup {
+  max-width: 600px;
+}
+
+.mapboxgl-popup-content {
+  text-align: center;
+  font-family: 'Open Sans', sans-serif;
 }
