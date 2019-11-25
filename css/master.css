@@ -9,6 +9,7 @@ body {
   color: black;
   text-align: center;
   padding-top: 20px;
+  padding-bottom: 20px;
   font-size: 60px;
 }
 
@@ -18,7 +19,9 @@ body {
 
 main {
   flex: 1 0 auto;
-  background-color: #56CC9D;
+  /*background-color: #56CC9D;*/
+  background: rgb(2, 0, 36);
+  background: linear-gradient(360deg, rgba(2, 0, 36, 1) 0%, rgba(9, 9, 121, 1) 0%, rgba(86, 204, 157, 1) 0%, rgba(0, 212, 255, 1) 100%);
 }
 
 .footer {
@@ -31,10 +34,23 @@ main {
   text-align: center;
 }
 
+.h-100 {
+  margin-top: 60px;
+}
+
 .card {
   height: 600px;
   max-width: 400px;
   margin: 0 auto;
+  transition: transform .1s;
+}
+
+.card:hover {
+  -ms-transform: scale(1.1);
+  /* IE 9 */
+  -webkit-transform: scale(1.1);
+  /* Safari 3-8 */
+  transform: scale(1.1);
 }
 
 .fab {
