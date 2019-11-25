@@ -47,6 +47,10 @@
 
   <main class="container">
     <h1 class="row">Welcome to The Little Green Larder Shop</h1>
+    <div class="row">
+      <img class="col-lg-5 p-0" src="../img/shop-front.jpg" alt="Picture of the store's front">
+      <p class="col-lg-7 text-justify">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+    </div>
     <h3 class="row">We are here:</h3>
     <div class="row">
       <div id='map'></div>
@@ -61,48 +65,7 @@
   </footer>
 
   <!-- Script for map from https://docs.mapbox.com/help/tutorials/custom-markers-gl-js/ -->
-  <script>
-    mapboxgl.accessToken = 'pk.eyJ1IjoiYXJjZmVqIiwiYSI6ImNrMnhoazQyeDBicmYzYnBkbHF0cXp2anYifQ.esr-RTeyjx4JbwgctD1ykA';
-
-    var map = new mapboxgl.Map({
-      container: 'map',
-      style: 'mapbox://styles/mapbox/streets-v11',
-      center: [-2.992313, 56.455915],
-      zoom: 14,
-    });
-
-    var geojson = {
-      type: 'FeatureCollection',
-      features: [
-          {
-            type: 'Feature',
-            geometry: {
-              type: "Point",
-              coordinates: [-2.992313, 56.455915]
-            },
-            properties: {
-              title: 'The Little Green Larder',
-              description: 'The Little Green Larder offers a plastic free shopping experience, with zero waste alternatives to inspire us to create a greener future.'
-            }
-        }
-      ]
-    };
-
-    // add markers to map
-    geojson.features.forEach(function(marker) {
-      // create a HTML element for each shop
-      var el = document.createElement('i');
-      el.className = 'marker';
-
-      // make a marker for each shop and add to the map
-      new mapboxgl.Marker(el)
-        .setLngLat(marker.geometry.coordinates)
-        .setPopup(new mapboxgl.Popup({ offset: 25 }) // add popups
-          .setHTML('<h3>' + marker.properties.title + '</h3><p>' + marker.properties.description + '</p>')
-          .addTo(map))
-        .addTo(map);
-    });
-  </script>
+  <script src="../script/shop.js" charset="utf-8"></script>
 </body>
 
 </html>
