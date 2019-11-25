@@ -53,6 +53,10 @@ main {
   transform: scale(1.1);
 }
 
+#card-title {
+  color: black;
+}
+
 .fab {
   color: #FFFFFF;
 }
