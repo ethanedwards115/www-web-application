@@ -11,3 +11,11 @@
   color: white;
   text-align: center;
 }
+
+.marker {
+  background-size: cover;
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  cursor: pointer;
+}
