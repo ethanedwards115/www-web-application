@@ -1,4 +1,4 @@
-/* The font for the style of the shop */
+/* The font for the title of the pages */
 @import url('https://fonts.googleapis.com/css?family=Alata&display=swap');
 
 body {
@@ -17,11 +17,34 @@ main {
   /* Make main as big as possible */
   flex: 1 0 auto;
 }
+  
+#homeHeading {
+  font-family: 'Alata', sans-serif;
+  color: black;
+  text-align: center;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  font-size: 80px;
+  letter-spacing: 4px;
+  -webkit-text-fill-color: rgb(0, 212, 255);
+  -webkit-text-stroke-width: 6px;
+  -webkit-text-stroke-color: black;
+}
+
+#dundee{
+  -webkit-text-stroke-color: #3A9B67;
+  font-size: 90px;
+}
+
+#homeBackground {
+  background: rgb(2, 0, 36);
+  background: linear-gradient(360deg, rgba(2, 0, 36, 1) 0%, rgba(9, 9, 121, 1) 0%, rgba(86, 204, 157, 1) 0%, rgba(0, 212, 255, 1) 100%);
+}
 
 .footer {
   /* Shrink the footer to the content's size */
   flex-shrink: 0;
-
+  
   /* Make it as width as the screen (body) */
   width: 100%;
   background-color: #56CC9D;
@@ -125,6 +148,33 @@ h1 {
  color: #FFFFFF;
 }
 
+.card {
+  height: 600px;
+  max-width: 400px;
+  margin: 0 auto;
+  transition: transform .1s;
+}
+
+.card:hover {
+  -ms-transform: scale(1.1);
+  /* IE 9 */
+  -webkit-transform: scale(1.1);
+  /* Safari 3-8 */
+  transform: scale(1.1);
+}
+
+#card-title {
+  color: black;
+}
+
+#green-button {
+  margin-top: 23px;
+}
+
+.fab {
+  color: #FFFFFF;
+}
+
 .fa-facebook-square {
   color: #3B5998;
 }
@@ -135,28 +185,4 @@ h1 {
 
 .fa-facebook-square:hover {
   color: #8B9DC3;
-}
-
-/* The background of the home page */
-#homeBackground {
-  background-color: #56CC9D;
-  height: 950px;
-}
-
-#homeHeading {
-  color: black;
-  text-align: center;
-  padding-top: 20px;
-  font-size: 60px;
-}
-
-.card {
-  margin-left: 150px;
-  margin-right: 150px;
-  display: inline-block;
-  height: 700px;
-}
-
-#greenCard {
-  float: right;
 }
