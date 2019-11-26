@@ -43,7 +43,7 @@ main {
   text-align: center;
   font-family: 'Open Sans', sans-serif;
 }
-  
+
 .fab {
  color: #FFFFFF;
 }
@@ -70,10 +70,6 @@ main {
   text-align: center;
   padding-top: 20px;
   font-size: 60px;
-}
-
-.container{
-  width: 500px;
 }
 
 .card {
