@@ -17,23 +17,23 @@ main {
   /* Make main as big as possible */
   flex: 1 0 auto;
 }
-  
+
 #homeHeading {
   font-family: 'Alata', sans-serif;
   color: black;
   text-align: center;
   padding-top: 20px;
   padding-bottom: 20px;
-  font-size: 80px;
-  letter-spacing: 4px;
+  font-size: 40px;
+  letter-spacing: 2px;
   -webkit-text-fill-color: rgb(0, 212, 255);
-  -webkit-text-stroke-width: 6px;
+  -webkit-text-stroke-width: 2.5px;
   -webkit-text-stroke-color: black;
 }
 
 #dundee{
   -webkit-text-stroke-color: #3A9B67;
-  font-size: 90px;
+  font-size: 50px;
 }
 
 #homeBackground {
@@ -44,7 +44,7 @@ main {
 .footer {
   /* Shrink the footer to the content's size */
   flex-shrink: 0;
-  
+
   /* Make it as width as the screen (body) */
   width: 100%;
   background-color: #56CC9D;
@@ -84,6 +84,15 @@ h1 {
   .shop-name {
     -webkit-text-stroke-width: 3px;
   }
+
+  #homeHeading {
+    font-size: 50px;
+    -webkit-text-stroke-width: 3px;
+  }
+
+  #dundee{
+    font-size: 60px;
+  }
 }
 
 @media (min-width: 768px) {
@@ -93,6 +102,15 @@ h1 {
 
   .shop-name {
     -webkit-text-stroke-width: 3.5px;
+  }
+
+  #homeHeading {
+    font-size: 60px;
+    -webkit-text-stroke-width: 3.5px;
+  }
+
+  #dundee{
+    font-size: 70px;
   }
 }
 
@@ -104,6 +122,15 @@ h1 {
   .shop-name {
     -webkit-text-stroke-width: 4px;
   }
+
+  #homeHeading {
+    font-size: 70px;
+    -webkit-text-stroke-width: 4px;
+  }
+
+  #dundee{
+    font-size: 80px;
+  }
 }
 
 @media (min-width: 1200px) {
@@ -113,6 +140,15 @@ h1 {
 
   .shop-name {
     -webkit-text-stroke-width: 5px;
+  }
+
+  #homeHeading {
+    font-size: 80px;
+    -webkit-text-stroke-width: 5px;
+  }
+
+  #dundee{
+    font-size: 90px;
   }
 }
 
