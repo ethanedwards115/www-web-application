@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css?family=Alata&display=swap');
+
 body {
   display: flex;
   flex-direction: column;
@@ -6,11 +8,21 @@ body {
 }
 
 #homeHeading {
+  font-family: 'Alata', sans-serif;
   color: black;
   text-align: center;
   padding-top: 20px;
   padding-bottom: 20px;
-  font-size: 60px;
+  font-size: 80px;
+  letter-spacing: 4px;
+  -webkit-text-fill-color: rgb(0, 212, 255);
+  -webkit-text-stroke-width: 6px;
+  -webkit-text-stroke-color: black;
+}
+
+#dundee{
+  -webkit-text-stroke-color: #3A9B67;
+  font-size: 90px;
 }
 
 .navbar .navbar-expand-lg .navbar-light .bg-light {
@@ -55,6 +67,10 @@ main {
 
 #card-title {
   color: black;
+}
+
+#green-button {
+  margin-top: 23px;
 }
 
 .fab {
