@@ -4,7 +4,6 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  height: 100%;
 }
 
 #homeHeading {
@@ -26,7 +25,11 @@ body {
 }
 
 .navbar .navbar-expand-lg .navbar-light .bg-light {
-  position: fixed;
+  flex-shrink: 0;
+}
+
+main {
+  flex: 1 0 auto;
 }
 
 main {
@@ -38,8 +41,6 @@ main {
 
 .footer {
   flex-shrink: 0;
-  left: 0;
-  bottom: 0;
   width: 100%;
   background-color: #56CC9D;
   color: white;
@@ -48,6 +49,10 @@ main {
 
 .h-100 {
   margin-top: 60px;
+}
+
+.fab {
+ color: #FFFFFF;
 }
 
 .card {
@@ -71,6 +76,7 @@ main {
 
 #green-button {
   margin-top: 23px;
+
 }
 
 .fab {
