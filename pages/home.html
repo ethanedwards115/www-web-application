@@ -1,46 +1,70 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
-  <head>
-    <meta charset="utf-8">
-    <link rel="stylesheet" href="../css/bootstrap.css">
-    <link rel="stylesheet" href="../css/master.css">
-    <script src="https://kit.fontawesome.com/6854d7f83d.js" crossorigin="anonymous"></script>
-    <title>Home Page</title>
-  </head>
+
+<head>
+  <meta charset="utf-8">
+  <link rel="stylesheet" href="../css/bootstrap.css">
+  <link rel="stylesheet" href="../css/master.css">
+  <link rel="apple-touch-icon" sizes="57x57" href="../pictures/apple-icon-57x57.png">
+  <link rel="apple-touch-icon" sizes="60x60" href="../pictures/apple-icon-60x60.png">
+  <link rel="apple-touch-icon" sizes="72x72" href="../pictures/apple-icon-72x72.png">
+  <link rel="apple-touch-icon" sizes="76x76" href="../pictures/apple-icon-76x76.png">
+  <link rel="apple-touch-icon" sizes="114x114" href="../pictures/apple-icon-114x114.png">
+  <link rel="apple-touch-icon" sizes="120x120" href="../pictures/apple-icon-120x120.png">
+  <link rel="apple-touch-icon" sizes="144x144" href="../pictures/apple-icon-144x144.png">
+  <link rel="apple-touch-icon" sizes="152x152" href="../pictures/apple-icon-152x152.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="../pictures/apple-icon-180x180.png">
+  <link rel="icon" type="image/png" sizes="192x192" href="../pictures/android-icon-192x192.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="../pictures/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="96x96" href="../pictures/favicon-96x96.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="../pictures/favicon-16x16.png">
+  <link rel="manifest" href="/manifest.json">
+  <meta name="msapplication-TileColor" content="#ffffff">
+  <meta name="msapplication-TileImage" content="../pictures/ms-icon-144x144.png">
+  <meta name="theme-color" content="#ffffff">
+  <script src="https://kit.fontawesome.com/6854d7f83d.js" crossorigin="anonymous"></script>
+  <title>Live Well Dundee</title>
+</head>
 
 
-<body >
- <main id=homeBackground> 
-    <div class="container">
-      <h1 id=homeHeading>Live well in Dundee</h1>
+<body class="min-vh-100">
+  <main class="container-fluid pb-4" id=homeBackground>
+    <div class="container h-100">
+
+      <div class="row">
+        <h1 id=homeHeading class="col-12">LIVE WELL IN <span id=dundee>DUNDEE</span></h1>
+      </div>
+
+      <div class="row align-items-center">
+
+        <div class="card col-12 col-lg-6 mx-auto my-3">
+          <img class="card-img-top" src="../pictures/little_green_larder.jpg" alt="Little green larder image">
+          <div class="card-body">
+            <h4 class="card-title" id=card-title>The Little Green Larder</h4>
+            <p class="card-text" id=card-text>The Little Green Larder offers a plastic free shopping experience, with zero waste alternatives to inspire us to create a greener future.</p>
+            <a href="shop.html" target="_blank" class="btn btn-outline-dark stretched-link">Click to visit page</a>
+          </div>
+        </div>
+
+        <div class="card col-12 col-lg-6 mx-auto my-3" id=greenCard>
+          <img class="card-img-top" src="../pictures/green_living.jpg" alt="Little green larder image">
+          <div class="card-body">
+            <h4 class="card-title" id=card-title>Green Living</h4>
+            <p class="card-text" id=card-text>Learn about the impact we are having on our enviroment as well as recipe tips and tricks to help you live better.</p>
+            <a href="#" class="btn btn-outline-dark stretched-link" id="green-button">Click to visit page</a>
+          </div>
+        </div>
+      </div>
     </div>
 
-<div class="card" style="width:500px">
-    <img class="card-img-top" src="../pictures/little_green_larder.jpg" alt="Little green larder image">
-    <div class="card-body">
-    <h4 class="card-title">The Little Green Larder</h4>
-    <p class="card-text">The Little Green Larder offers a plastic free shopping experience, with zero waste alternatives to inspire us to create a greener future.</p>
-    <a href="#" class="btn btn-primary stretched-link">Click to visit page</a>
-  </div>
-</div>
+  </main>
 
-<div class="card" id=greenCard style="width:500px">
-   <img class="card-img-top" src="../pictures/green_living.jpg" alt="Little green larder image">
-   <div class="card-body">
-   <h4 class="card-title">Green Living</h4>
-   <p class="card-text">Learn about the impact we are having on out enviroment as well as recipe tips and tricks to help you live better.</p>
-   <a href="#" class="btn btn-primary stretched-link">Click to visit page</a>
-  </div>
-</div>
-
-</main>
-
- <footer>
+  <footer>
     <div class="footer">
       <div class="icons">
         <a href="https://www.facebook.com/thelittlegreenlarder/" target="_blank"><em class="fab fa-facebook-square fa-2x"></em></a>
         <a href="https://www.instagram.com/thelittlegreenlarder/" target="_blank"><em class="fab fa-instagram fa-2x"></em></a>
-     </div>
+      </div>
     </div>
   </footer>
 

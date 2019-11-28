@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <link rel="stylesheet" href="../css/bootstrap.css">
+  <link rel="stylesheet" href="../css/master.css">
+  <link rel="apple-touch-icon" sizes="57x57" href="../pictures/apple-icon-57x57.png">
+  <link rel="apple-touch-icon" sizes="60x60" href="../pictures/apple-icon-60x60.png">
+  <link rel="apple-touch-icon" sizes="72x72" href="../pictures/apple-icon-72x72.png">
+  <link rel="apple-touch-icon" sizes="76x76" href="../pictures/apple-icon-76x76.png">
+  <link rel="apple-touch-icon" sizes="114x114" href="../pictures/apple-icon-114x114.png">
+  <link rel="apple-touch-icon" sizes="120x120" href="../pictures/apple-icon-120x120.png">
+  <link rel="apple-touch-icon" sizes="144x144" href="../pictures/apple-icon-144x144.png">
+  <link rel="apple-touch-icon" sizes="152x152" href="../pictures/apple-icon-152x152.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="../pictures/apple-icon-180x180.png">
+  <link rel="icon" type="image/png" sizes="192x192" href="../pictures/android-icon-192x192.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="../pictures/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="96x96" href="../pictures/favicon-96x96.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="../pictures/favicon-16x16.png">
+  <link rel="manifest" href="/manifest.json">
+  <meta name="msapplication-TileColor" content="#ffffff">
+  <meta name="msapplication-TileImage" content="../pictures/ms-icon-144x144.png">
+  <meta name="theme-color" content="#ffffff">
+  <!-- Mapbox -->
+  <script src='https://api.mapbox.com/mapbox-gl-js/v1.4.1/mapbox-gl.js'></script>
+  <link href='https://api.mapbox.com/mapbox-gl-js/v1.4.1/mapbox-gl.css' rel='stylesheet' />
+
+  <!-- Icons -->
+  <script src="https://kit.fontawesome.com/6854d7f83d.js" crossorigin="anonymous"></script>
+
+  <title>The Little Green Larder</title>
+</head>
+
+<body class="min-vh-100">
+  <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+    <a class="navbar-brand" href="#">The Little Green Larder</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarColor01" aria-controls="navbarColor01" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarColor01">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item">
+          <a class="nav-link" href="#">Products</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Delivery</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Events</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">How the shop works</a>
+        </li>
+      </ul>
+      <form class="form-inline my-2 my-lg-0">
+        <input class="form-control mr-sm-2" type="text" placeholder="Search">
+        <button class="btn btn-secondary my-2 my-sm-0" type="submit">Search</button>
+      </form>
+    </div>
+  </nav>
+
+  <main class="container my-4">
+    <h1 class="row my-4 mx-2 row-with-span">Welcome to <span class="shop-name">The Little <span class="green">Green</span> Larder</span></h1>
+    <div class="row mx-2">
+      <img class="col-lg-6 p-0 pr-lg-2" src="../img/shop-front.jpg" alt="Picture of the store's front">
+      <p class="col-lg-6 text-justify px-0 pt-2 pl-lg-2 py-lg-0">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+    </div>
+    <div class="row mx-2 my-4">
+      <h3 class="">We are here:</h3>
+      <div class="w-100">
+        <div id='map'></div>
+      </div>
+    </div>
+  </main>
+
+  <footer>
+    <div class="footer">
+      <div class="icons">
+        <a href="https://www.facebook.com/thelittlegreenlarder/" target="_blank"><em class="fab fa-facebook-square fa-2x"></em></a>
+        <a href="https://www.instagram.com/thelittlegreenlarder/" target="_blank"><em class="fab fa-instagram fa-2x"></em></a>
+     </div>
+    </div>
+  </footer>
+
+  <!-- Script for map from https://docs.mapbox.com/help/tutorials/custom-markers-gl-js/ -->
+  <script src="../script/shop.js" charset="utf-8"></script>
+</body>
+
+</html>

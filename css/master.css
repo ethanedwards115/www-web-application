@@ -1,27 +1,214 @@
+/* The font for the title of the pages */
+@import url('https://fonts.googleapis.com/css?family=Alata&display=swap');
+
 body {
+  /* Display the navbar-main-footer in a column and stick the navbar and footer to the top/bottom */
   display: flex;
   flex-direction: column;
   justify-content: space-between;
 }
 
 .navbar .navbar-expand-lg .navbar-light .bg-light {
+  /* Shrink the navbar to the content's size */
   flex-shrink: 0;
 }
 
 main {
+  /* Make main as big as possible */
   flex: 1 0 auto;
 }
 
+#homeHeading {
+  font-family: 'Alata', sans-serif;
+  color: black;
+  text-align: center;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  font-size: 40px;
+  letter-spacing: 2px;
+  -webkit-text-fill-color: rgb(0, 212, 255);
+  -webkit-text-stroke-width: 2.5px;
+  -webkit-text-stroke-color: black;
+}
+
+#dundee{
+  -webkit-text-stroke-color: #3A9B67;
+  font-size: 50px;
+}
+
+#homeBackground {
+  background: rgb(2, 0, 36);
+  background: linear-gradient(360deg, rgba(2, 0, 36, 1) 0%, rgba(9, 9, 121, 1) 0%, rgba(86, 204, 157, 1) 0%, rgba(0, 212, 255, 1) 100%);
+}
+
 .footer {
+  /* Shrink the footer to the content's size */
   flex-shrink: 0;
+
+  /* Make it as width as the screen (body) */
   width: 100%;
   background-color: #56CC9D;
   color: white;
   text-align: center;
 }
 
+h1 {
+  font-size: 30px;
+  font-family: 'Alata', sans-serif;
+}
+
+.shop-name {
+  /* Always display the shop's name together */
+  display: inline-block;
+
+  text-transform: uppercase;
+  letter-spacing: 2px;
+
+  /* Make the font hollow */
+  -webkit-text-fill-color: white;
+  -webkit-text-stroke-width: 2px;
+  -webkit-text-stroke-color: black;
+}
+
+/* Make the shop name's outline green */
+.green {
+  -webkit-text-stroke-color: #3A9B67;
+}
+
+/* Make the texts bigger on larger screens */
+@media (min-width: 576px) {
+  h1 {
+    font-size: 40px;
+  }
+
+  .shop-name {
+    -webkit-text-stroke-width: 3px;
+  }
+
+  #homeHeading {
+    font-size: 50px;
+    -webkit-text-stroke-width: 3px;
+  }
+
+  #dundee{
+    font-size: 60px;
+  }
+}
+
+@media (min-width: 768px) {
+  h1 {
+    font-size: 50px;
+  }
+
+  .shop-name {
+    -webkit-text-stroke-width: 3.5px;
+  }
+
+  #homeHeading {
+    font-size: 60px;
+    -webkit-text-stroke-width: 3.5px;
+  }
+
+  #dundee{
+    font-size: 70px;
+  }
+}
+
+@media (min-width: 992px) {
+  h1 {
+    font-size: 60px;
+  }
+
+  .shop-name {
+    -webkit-text-stroke-width: 4px;
+  }
+
+  #homeHeading {
+    font-size: 70px;
+    -webkit-text-stroke-width: 4px;
+  }
+
+  #dundee{
+    font-size: 80px;
+  }
+}
+
+@media (min-width: 1200px) {
+  h1 {
+    font-size: 70px;
+  }
+
+  .shop-name {
+    -webkit-text-stroke-width: 5px;
+  }
+
+  #homeHeading {
+    font-size: 80px;
+    -webkit-text-stroke-width: 5px;
+  }
+
+  #dundee{
+    font-size: 90px;
+  }
+}
+
+#map {
+  height: 400px;
+  width: 100%
+}
+
+/* The marker of the shop on the map */
+.marker {
+  background-image: url('../img/marker.png');
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 50px;
+  height: 50px;
+  cursor: pointer;
+}
+
+/* The pop-up block when you click on a marker on the map */
+.mapboxgl-popup {
+  max-width: 600px;
+}
+
+/* The pop-up window's text attributes */
+.mapboxgl-popup-content {
+  text-align: center;
+  font-family: 'Open Sans', sans-serif;
+}
+
+/* Icons in the footer */
 .fab {
  color: #FFFFFF;
+}
+
+.card {
+  height: 600px;
+  max-width: 400px;
+  margin: 0 auto;
+  transition: transform .1s;
+}
+
+.card:hover {
+  -ms-transform: scale(1.1);
+  /* IE 9 */
+  -webkit-transform: scale(1.1);
+  /* Safari 3-8 */
+  transform: scale(1.1);
+}
+
+#card-title {
+  color: black;
+}
+
+#green-button {
+  margin-top: 23px;
+}
+
+.fab {
+  color: #FFFFFF;
 }
 
 .fa-facebook-square {
@@ -34,27 +221,4 @@ main {
 
 .fa-facebook-square:hover {
   color: #8B9DC3;
-}
-
-#homeBackground {
-  background-color: #56CC9D;
-  height: 950px;
-}
-
-#homeHeading {
-  color: black;
-  text-align: center;
-  padding-top: 20px;
-  font-size: 60px;
-}
-
-.card {
-  margin-left: 150px;
-  margin-right: 150px;
-  display: inline-block;
-  height: 700px;
-}
-
-#greenCard {
-  float: right;
 }
