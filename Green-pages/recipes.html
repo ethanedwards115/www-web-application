@@ -51,12 +51,9 @@
           <a class="nav-link" href="#">Blog</a>
         </li>
       </ul>
-      <form class="form-inline my-2 my-lg-0">
-        <input class="form-control mr-sm-2" type="text" placeholder="Search">
-        <button class="btn btn-secondary my-2 my-sm-0" type="submit">Search</button>
-      </form>
     </div>
   </nav>
+
 
   <main>
     <div class="container">
@@ -122,7 +119,8 @@
           recipeIngredients = element.recipe.ingredientLines.toString();
           recipeURL = element.recipe.url;
 
-          div.innerHTML = "<div class='card border-success mb-3 mx-auto my-3'><img class='card-img-top' src=" + recipeImage + "><div class='card-body'><h5 class='card-title'>" + recipeTitle + "</h5><p class='card-text'>" + recipeSource + "</p><a class=\"btn btn-primary card-text\" href=\"" + recipeURL + "\" target=\"_blank\" >Go to recipe</a></div>";
+          div.innerHTML = "<div class='card border-success mb-3 mx-auto my-3'><img class='card-img-top' src=" + recipeImage + "><div class='card-body'><h5 class='card-title'>" + recipeTitle + "</h5><p class='card-text'>" + recipeSource +
+            "</p><a class=\"btn btn-primary card-text\" href=\"" + recipeURL + "\" target=\"_blank\" >Go to recipe</a></div>";
           append(recipeContainer, div);
         })
       })
