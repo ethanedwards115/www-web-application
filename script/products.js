@@ -543,23 +543,27 @@ function displayProducts() {
             span = createNode('span');
 
           img.src = items[i][j].img;
-          h5.innerHTML = `${movie.Title}`;
+          name.innerHTML = `${items[i][j].name}`;
+          stock.innerHTML = `${items[i][j].stock}`;
+          price.innerHTML = `${items[i][j].price}`;
 
           div1.setAttribute('class', 'card');
           div1.setAttribute('style', 'width: 18rem;');
           img.setAttribute('class', 'card-img-top');
           div2.setAttribute('class', 'card-body');
-          h5.setAttribute('class', 'card-title');
-          p.setAttribute('class', 'card-text');
+          name.setAttribute('class', 'card-title');
+          stock.setAttribute('class', 'card-text');
+          price.setAttribute('class', 'card-text');
 
           append(li, div1);
           append(div1, img);
           append(div1, div2);
-          append(div2, h5);
-          append(div2, p);
+          append(div2, name);
+          append(div2, stock);
+          append(div2, price);
 
           append(li, span);
-          append(ul, li);
+          append(container, li);
         }
       }
     });
