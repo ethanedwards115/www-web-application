@@ -179,11 +179,6 @@ h1 {
   font-family: 'Open Sans', sans-serif;
 }
 
-/* Icons in the footer */
-.fab {
- color: #FFFFFF;
-}
-
 .card {
   height: 600px;
   max-width: 400px;
@@ -207,6 +202,11 @@ h1 {
   margin-top: 23px;
 }
 
+.divider {
+  height: 10px;
+}
+
+/* Icons in the footer */
 .fab {
   color: #FFFFFF;
 }

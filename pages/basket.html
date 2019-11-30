@@ -45,6 +45,7 @@
       <span class="navbar-toggler-icon"></span>
     </button>
 
+    <!-- Navbar -->
     <div class="collapse navbar-collapse" id="navbarColor01">
       <ul class="navbar-nav mr-auto">
         <li class="nav-item active">
@@ -67,20 +68,66 @@
     </div>
   </nav>
 
-  <main id="main" class="container">
-    <h1 class=>Basket</h1>
-    <table id="basket-table" class="table table-striped">
-      <thead>
-        <tr>
-          <th scope="col">Product Name</th>
-          <th scope="col">Amount</th>
-          <th scope="col">Price</th>
-        </tr>
-      </thead>
-      <tbody>
+  <main id="main" class="container my-4">
+    <h1 class="form-row shop-name my-4">Basket</h1>
+    <h3 class="form-row">Products</h3>
+    <div class="form-row">
+      <table id="basket-table" class="table table-striped">
+        <thead class="thead-dark">
+          <tr>
+            <th scope="col">Product Name</th>
+            <th scope="col">Amount</th>
+            <th scope="col">Price</th>
+          </tr>
+        </thead>
+        <tbody>
 
-      </tbody>
-    </table>
+        </tbody>
+      </table>
+    </div>
+
+    <!-- Form for ordering -->
+    <form class="my-4">
+      <!-- name, address (street, number flat etc, city, zip), contact (number, email) -->
+      <h3 class="form-row my-0">Delivery details</h3>
+      <div class="divider form-row bg-primary mb-2"></div>
+      <div class="form-group">
+        <label for="inputName">Name</label>
+        <input type="text" class="form-control" id="inputName" placeholder="e.g. John Doe">
+      </div>
+      <div class="form-group">
+        <label for="inputHouse">House Name or Number</label>
+        <input type="text" class="form-control" id="inputHouse" placeholder="e.g. Magnum House Flat E">
+      </div>
+      <div class="form-group">
+        <label for="inputStreet">Street Address</label>
+        <input type="text" class="form-control" id="inputStreet" placeholder="e.g. Perth Road">
+      </div>
+      <div class="form-row">
+        <div class="form-group col-6">
+          <label for="inputCity">City</label>
+          <input type="text" class="form-control" id="inputCity" placeholder="e.g. Dundee">
+        </div>
+        <div class="form-group col-6">
+          <label for="inputZip">Postcode</label>
+          <input type="text" class="form-control" id="inputZip" placeholder="e.g. DD2 1AE">
+        </div>
+      </div>
+
+      <h3 class="form-row my-0">Contact details</h3>
+      <div class="divider form-row bg-primary mb-2"></div>
+      <div class="form-group">
+        <label for="inputEmail">Email</label>
+        <input type="email" class="form-control" id="inputEmail" placeholder="e.g. johndoe@gmail.com">
+      </div>
+      <div class="form-group">
+        <label for="inputPhone">Phone Number</label>
+        <input type="tel"class="form-control" id="inputPhone" placeholder="e.g. 07123456789">
+      </div>
+      <div class="form-row justify-content-end my-4">
+        <button type="submit" class="btn btn-lg btn-block btn-primary">Send Order</button>
+      </div>
+    </form>
   </main>
 
   <footer>
