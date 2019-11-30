@@ -46,20 +46,27 @@
 
   <main class="container grid-container">
 
-    <div class="grid-25 btn-group-vertical btn-group-toggle" data-toggle="buttons">
-      <label class="btn btn-secondary active">
-        <input type="radio" name="options" id="option1" autocomplete="off" checked> Active
-      </label>
-      <label class="btn btn-secondary">
-        <input type="radio" name="options" id="option2" autocomplete="off"> Radio
-      </label>
-      <label class="btn btn-secondary">
-        <input type="radio" name="options" id="option3" autocomplete="off"> Radio
-      </label>
+    <div class="grid-100" id="homeHeading">
+      <h1 class="shop-name">OUR <span id="dundee">PRODUCTS</span></h1>
+    </div>
+
+    <div class="grid-15">
+      <table class="table">
+        <thead>
+          <tr class="table-primary">
+            <th scope="col">Item</th>
+            <th scope="col">Amount</th>
+            <th scope="col">Price</th>
+          </tr>
+        </thead>
+        <tbody class="table-striped" id="basket">
+
+        </tbody>
+      </table>
     </div>
 
     <!-- used for displaying product items in JS-->
-    <ul class="grid-75" id="products-container"></ul>
+    <ul class="grid-85" id="products-container"></ul>
 
   </main>
 

@@ -1,11 +1,17 @@
-#products-container {
-  display: flex;
-  width: 750px;
+.table {
+  float: left;
+}
+.card {
+  width: 15rem;
+  height: auto;
 }
 
-.card {
-  width: 18rem;
-  height: auto;
+.grid-15 {
+  float: left;
+}
+
+.grid-85 {
+  float: right;
 }
 
 ul {

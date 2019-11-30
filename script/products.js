@@ -498,27 +498,6 @@ function append(parent, element) {
   parent.appendChild(element);
 }
 
-function setFilterTags() {
-  var promise = Promise.resolve(products);
-
-  var container = document.getElementById("filter-tags");
-
-  promise.then(function(json) {
-      return json.items;
-    })
-    .then(function(items) {
-
-      for (var i = 0; i < items.length; i++) {
-        var tag = document.createElement("a");
-        tag.setAttribute("class", "dropdown-item");
-
-        tag.innerHTML = items[i][0].category;
-
-        append(container, tag);
-      }
-    })
-}
-
 function displayProducts() {
 
   var promise = Promise.resolve(products);
@@ -540,34 +519,115 @@ function displayProducts() {
             name = createNode('h5'),
             stock = createNode('p'),
             price = createNode('p'),
+            basketButton = createNode('button'),
             span = createNode('span');
 
           img.src = items[i][j].img;
           name.innerHTML = `${items[i][j].name}`;
           stock.innerHTML = `${items[i][j].stock}`;
           price.innerHTML = `${items[i][j].price}`;
+          basketButton.innerHTML = 'Add to basket';
 
           div1.setAttribute('class', 'card');
-          div1.setAttribute('style', 'width: 18rem;');
+          //div1.setAttribute('style', 'width: 18rem;');
           img.setAttribute('class', 'card-img-top');
           div2.setAttribute('class', 'card-body');
           name.setAttribute('class', 'card-title');
           stock.setAttribute('class', 'card-text');
           price.setAttribute('class', 'card-text');
+          basketButton.setAttribute('class', 'btn btn-primary');
+          basketButton.setAttribute('type', 'button');
+          basketButton.setAttribute('onclick', 'addToBasket(' + i + ', ' + j + ')');
 
-          append(li, div1);
-          append(div1, img);
-          append(div1, div2);
-          append(div2, name);
-          append(div2, stock);
-          append(div2, price);
+          try {
+            append(li, div1);
+            append(div1, img);
+            append(div1, div2);
+            append(div2, name);
+            append(div2, stock);
+            append(div2, price);
+            append(div2, basketButton);
 
-          append(li, span);
-          append(container, li);
+            append(li, span);
+            append(container, li);
+          } catch (e) {
+            console.log(e);
+          }
         }
       }
     });
 }
 
-setFilterTags();
+function addToBasket(i, j) {
+
+  var basket = localStorage.getItem('basket');
+
+  if (basket === null) {
+    basket = {
+      products: []
+    };
+  } else {
+    basket = JSON.parse(basket);
+  }
+
+  console.log(basket);
+
+  var promise = Promise.resolve(products);
+
+  promise.then(function(json) {
+      return json.items;
+    })
+    .then(function(items) {
+
+      //basket = JSON.parse(basket);
+
+      console.log(basket);
+      console.log(items[i][j].name);
+
+      basket.products.push({
+        name: items[i][j].name,
+        amount: "100g",
+        price: 2.5
+      })
+
+      basket = JSON.stringify(basket);
+      console.log(basket);
+
+      localStorage.setItem('basket', basket);
+    });
+}
+
+function clearChildren(el){
+  while (el.hasChildren()) {
+    myNode.removeChild(myNode.firstChild);
+  }
+}
+
+function displayBasket(){
+
+  var basket = localStorage.getItem('basket');
+
+  if (basket === null) {
+    basket = {
+      products: []
+    };
+  } else {
+    basket = JSON.parse(basket);
+  }
+
+  var basketList = document.getElementById('basket');
+  clearChildren(basketList);
+
+  items = basket.products;
+  for (var i = 0; i < items.length; i++) {
+    var row = document.createElement('tr');
+    var itemName = document.createElement('td');
+    var amount = document.createElement('td');
+    var price = document.createElement('td');
+  }
+}
+
+//setFilterTags();
 displayProducts();
+
+console.log(localStorage.getItem('basket'));
