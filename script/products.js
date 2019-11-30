@@ -594,12 +594,14 @@ function addToBasket(i, j) {
       console.log(basket);
 
       localStorage.setItem('basket', basket);
+
+      displayBasket();
     });
 }
 
 function clearChildren(el){
-  while (el.hasChildren()) {
-    myNode.removeChild(myNode.firstChild);
+  while (el.firstChild) {
+    el.removeChild(el.firstChild);
   }
 }
 
@@ -624,10 +626,20 @@ function displayBasket(){
     var itemName = document.createElement('td');
     var amount = document.createElement('td');
     var price = document.createElement('td');
+
+    itemName.innerHTML = `${items[i].name}`;
+    amount.innerHTML = `${items[i].amount}`;
+    price.innerHTML = `${'£'+items[i].price}`;
+
+    append(row, itemName);
+    append(row, amount);
+    append(row, price);
+    append(basketList, row);
   }
 }
 
 //setFilterTags();
 displayProducts();
+displayBasket();
 
 console.log(localStorage.getItem('basket'));
