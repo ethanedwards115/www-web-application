@@ -4,6 +4,7 @@
 <head>
   <meta charset="utf-8">
   <link rel="stylesheet" href="../css/bootstrap.css">
+  <link rel="stylesheet" href="../css/unsemantic-grid-responsive-tablet-rtl.css">
   <link rel="stylesheet" href="../css/products.css">
   <link rel="stylesheet" href="../css/master.css">
   <script src="https://kit.fontawesome.com/6854d7f83d.js" crossorigin="anonymous"></script>
@@ -43,18 +44,22 @@
     </div>
   </nav>
 
-  <main class="container">
+  <main class="container grid-container">
 
-    <div class="btn-group btn-group-toggle" role="group">
-      <button id="filterToggleList" type="button" class="btn btn-secondary dropdown-toggle btn-lg" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-        Filter by category
-      </button>
-      <div id="filter-tags" class="dropdown-menu" aria-labelledby="filterToggleList">
-      </div>
+    <div class="grid-25 btn-group-vertical btn-group-toggle" data-toggle="buttons">
+      <label class="btn btn-secondary active">
+        <input type="radio" name="options" id="option1" autocomplete="off" checked> Active
+      </label>
+      <label class="btn btn-secondary">
+        <input type="radio" name="options" id="option2" autocomplete="off"> Radio
+      </label>
+      <label class="btn btn-secondary">
+        <input type="radio" name="options" id="option3" autocomplete="off"> Radio
+      </label>
     </div>
 
     <!-- used for displaying product items in JS-->
-    <ul id="products-container"></ul>
+    <ul class="grid-75" id="products-container"></ul>
 
   </main>
 
