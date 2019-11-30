@@ -62,7 +62,6 @@ for (product of basket.products) {
 });*/
 
 function sendOrder() {
-    let form = document.getElementById('order');
     let name = document.getElementById('inputName').value;
     let house = document.getElementById('inputHouse').value;
     let street = document.getElementById('inputStreet').value;
@@ -102,4 +101,7 @@ function sendOrder() {
             window.URL.revokeObjectURL(url);
         }, 0);
     };
+
+    let form = document.getElementById('order');
+    form.reset();
 }
