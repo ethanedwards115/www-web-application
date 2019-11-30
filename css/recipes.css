@@ -1,0 +1,87 @@
+/* The font for the title of the pages */
+@import url('https://fonts.googleapis.com/css?family=Alata&display=swap');
+
+body {
+  /* Display the navbar-main-footer in a column and stick the navbar and footer to the top/bottom */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.navbar .navbar-expand-lg .navbar-light .bg-light {
+  /* Shrink the navbar to the content's size */
+  flex-shrink: 0;
+}
+
+main {
+  /* Make main as big as possible */
+  flex: 1 0 auto;
+}
+
+#button {
+  margin-top: 10px;
+}
+
+.card .border-success .mb-3 .mx-auto .my-3 {
+  height: 600px;
+  max-width: 400px;
+  margin: 0 auto;
+  height: auto;
+}
+
+.card-text {
+  color: black;
+  text-align: inline-block;
+}
+
+#edamam-badge {
+  float: right;
+  padding-bottom: 10px;
+}
+
+@media (max-width: 600px) {
+  .card .border-success .mb-3 .mx-auto .my-3 {
+     width: auto;
+  }
+}
+
+.shop-name {
+  /* Always display the shop's name together */
+  display: inline-block;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  /* Make the font hollow */
+  -webkit-text-fill-color: white;
+  -webkit-text-stroke-width: 2px;
+  -webkit-text-stroke-color: black;
+}
+
+.container {
+  margin-top: 20px;
+}
+
+.footer {
+  /* Shrink the footer to the content's size */
+  flex-shrink: 0;
+  /* Make it as width as the screen (body) */
+  width: 100%;
+  background-color: #56CC9D;
+  color: white;
+  text-align: center;
+}
+
+.fab {
+  color: #FFFFFF;
+}
+
+.fa-facebook-square {
+  color: #3B5998;
+}
+
+.fab:hover {
+  color: #CCCCCC;
+}
+
+.fa-facebook-square:hover {
+  color: #8B9DC3;
+}
