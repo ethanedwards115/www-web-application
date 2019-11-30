@@ -87,30 +87,45 @@
     </div>
 
     <!-- Form for ordering -->
-    <form class="my-4">
+    <form id="order" method="get" class="needs-validation my-4" novalidate>
       <!-- name, address (street, number flat etc, city, zip), contact (number, email) -->
       <h3 class="form-row my-0">Delivery details</h3>
       <div class="divider form-row bg-primary mb-2"></div>
       <div class="form-group">
         <label for="inputName">Name</label>
-        <input type="text" class="form-control" id="inputName" placeholder="e.g. John Doe">
+        <input type="text" name="name" class="form-control" id="inputName" placeholder="e.g. John Doe" required>
+        <div class="invalid-feedback">
+          Please provide a Name!
+        </div>
       </div>
       <div class="form-group">
         <label for="inputHouse">House Name or Number</label>
-        <input type="text" class="form-control" id="inputHouse" placeholder="e.g. Magnum House Flat E">
+        <input type="text" name="house" class="form-control" id="inputHouse" placeholder="e.g. Magnum House Flat E" required>
+        <div class="invalid-feedback">
+          Please provide a House Name or Number!
+        </div>
       </div>
       <div class="form-group">
         <label for="inputStreet">Street Address</label>
-        <input type="text" class="form-control" id="inputStreet" placeholder="e.g. Perth Road">
+        <input type="text" name="street" class="form-control" id="inputStreet" placeholder="e.g. Perth Road" required>
+        <div class="invalid-feedback">
+          Please provide a Street Address!
+        </div>
       </div>
       <div class="form-row">
         <div class="form-group col-6">
           <label for="inputCity">City</label>
-          <input type="text" class="form-control" id="inputCity" placeholder="e.g. Dundee">
+          <input type="text" name="city" class="form-control" id="inputCity" placeholder="e.g. Dundee" required>
+          <div class="invalid-feedback">
+            Please provide a City!
+          </div>
         </div>
         <div class="form-group col-6">
           <label for="inputZip">Postcode</label>
-          <input type="text" class="form-control" id="inputZip" placeholder="e.g. DD2 1AE">
+          <input type="text" name="zip" class="form-control" id="inputZip" placeholder="e.g. DD2 1AE" required>
+          <div class="invalid-feedback">
+            Please provide a valid Postcode!
+          </div>
         </div>
       </div>
 
@@ -118,14 +133,20 @@
       <div class="divider form-row bg-primary mb-2"></div>
       <div class="form-group">
         <label for="inputEmail">Email</label>
-        <input type="email" class="form-control" id="inputEmail" placeholder="e.g. johndoe@gmail.com">
+        <input type="email" name="email" class="form-control" id="inputEmail" placeholder="e.g. johndoe@gmail.com" required>
+        <div class="invalid-feedback">
+          Please provide a valid Email Address!
+        </div>
       </div>
       <div class="form-group">
         <label for="inputPhone">Phone Number</label>
-        <input type="tel"class="form-control" id="inputPhone" placeholder="e.g. 07123456789">
+        <input type="tel" name="phone" class="form-control" id="inputPhone" placeholder="e.g. 07123456789" required>
+        <div class="invalid-feedback">
+          Please provide a valid Phone Number!
+        </div>
       </div>
       <div class="form-row justify-content-end my-4">
-        <button type="submit" class="btn btn-lg btn-block btn-primary">Send Order</button>
+        <button type="button" class="btn btn-lg btn-block btn-primary" onclick="sendOrder();">Send Order</button>
       </div>
     </form>
   </main>
