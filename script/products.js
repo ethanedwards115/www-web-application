@@ -629,7 +629,7 @@ function displayBasket(){
 
     itemName.innerHTML = `${items[i].name}`;
     amount.innerHTML = `${items[i].amount}`;
-    price.innerHTML = `${'£'+items[i].price}`;
+    price.innerHTML = `${'£'+items[i].price.toFixed(2)}`;
 
     append(row, itemName);
     append(row, amount);
