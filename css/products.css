@@ -3,15 +3,6 @@
   height: auto;
 }
 
-.basket {
-  float: left;
-
-  /* Make it sticky to the bottom */
-  position: -webkit-sticky;
-  position: sticky;
-  top: 20px;
-}
-
 #products-container {
   margin: 10px auto;
   display: flex;
