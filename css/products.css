@@ -1,0 +1,21 @@
+.card {
+  width: 15rem;
+  height: auto;
+}
+
+.basket {
+  float: left;
+}
+
+ul {
+  margin: 10px auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+li {
+  padding: 10px;
+  list-style-type: none;
+  list-style-position: inside;
+}

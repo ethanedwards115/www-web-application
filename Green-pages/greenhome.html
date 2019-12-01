@@ -32,18 +32,14 @@
   <meta name="msapplication-TileImage" content="../pictures/ms-icon-144x144.png">
   <meta name="theme-color" content="#ffffff">
 
-  <!-- Mapbox -->
-  <script src='https://api.mapbox.com/mapbox-gl-js/v1.4.1/mapbox-gl.js'></script>
-  <link href='https://api.mapbox.com/mapbox-gl-js/v1.4.1/mapbox-gl.css' rel='stylesheet' />
-
-  <!-- Icons -->
+  <!-- For icons -->
   <script src="https://kit.fontawesome.com/6854d7f83d.js" crossorigin="anonymous"></script>
 
-  <title>The Little Green Larder</title>
+  <title>Green Living - Home</title>
 </head>
 
 <body class="min-vh-100">
-  <nav class="navbar navbar-expand-xl navbar-dark bg-primary">
+  <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
     <a class="navbar-brand" href="#">The Little Green Larder</a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarColor01" aria-controls="navbarColor01" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
@@ -51,64 +47,73 @@
 
     <div class="collapse navbar-collapse" id="navbarColor01">
       <ul class="navbar-nav mr-auto">
-        <li class="nav-item">
-          <a class="nav-link" href="#">Products</a>
+        <li class="nav-item active">
+          <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">Delivery</a>
+          <a class="nav-link" href="#">The Enviroment</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">Events</a>
+          <a class="nav-link" href="../Green-pages/recipes.html">Recipes</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">How the shop works</a>
-        </li>
-        <li class="nav-item d-xl-none">
-          <a class="nav-link" href="#">Basket <span class="badge badge-light">3</span></a>
+          <a class="nav-link" href="https://thelittlegreenblogger.com/index.php/home/" target="_blank">Blog</a>
         </li>
       </ul>
-      <ul class="navbar-nav ml-auto mr-3">
-        <li class="nav-item">
-          <a class="basket-link nav-link d-none d-xl-block" href="#"><i class="fas fa-shopping-basket fa-2x"></i><span class="basket-items-count badge badge-light">3</span></a>
-        </li>
-      </ul>
-      <form class="form-inline my-2 my-lg-0">
-        <input class="form-control mr-sm-2" type="text" placeholder="Search">
-        <button class="btn btn-secondary my-2 my-sm-0" type="submit">Search</button>
-      </form>
+
     </div>
   </nav>
 
   <main class="container my-4">
-    <h1 class="row my-4 mx-2 row-with-span">Welcome to <span class="shop-name">The Little <span class="green">Green</span> Larder</span></h1>
+    <h1 class="row my-4 mx-2 row-with-span"><span class="shop-name">Live <span class="green">Well</span></span></h1>
     <div class="row mx-2">
-      <img class="col-lg-6 p-0 pr-lg-2" src="../img/shop-front.jpg" alt="Picture of the store's front">
-      <p class="col-lg-6 text-justify px-0 pt-2 pl-lg-2 py-lg-0">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-    </div>
-    <div class="row mx-2 my-4">
-      <h3 class="">We are here:</h3>
-      <div class="w-100">
-        <div id='map'></div>
+      <img class="col-lg-6 p-0 pr-lg-2" src="../img/Green-living.webp" alt="Picture of the store's front">
+      <p id="greenPara" class="col-lg-6 text-justify px-0 pt-2 pl-lg-2 py-lg-0">This page is designed to give you an insight into how the earth is being impacted by Global warming, pollution and food waste. You can also search for food recipes based on ingredients or dietary requirements, and visit the blog of the owner of The Little Green Larder, Jillian Elizabeth.</p>
+
+
+
+      <div id=green-container class="container">
+        <p class=text-center>Hover over images</p>
+        <div class="row">
+          <div id=foodsHover class="col-12 col-md-4 my-2 mx-2 px-0 mx-md-0 px-md-2">
+            <img class="greenimg img-fluid" src="../img/foods.jpg" alt="Sustainable food lifestyle">
+            <div id=foods class="overlay">
+              <div class="text">A healthy compromise for you and the planet is a diet that includes plenty of fruits, vegetables and plant-based protein sources including legumes, soybeans and nuts.</div>
+            </div>
+          </div>
+          <div id=globalHover class="col-12 col-md-4 my-2 mx-2 px-0 mx-md-0 px-md-2">
+            <img class="greenimg img-fluid" src="../img/greenhouse.jpg" alt="Global Warming">
+            <div id=global class="overlay">
+              <div id=globalText class="text">Global warming is projected to have a number of effects on the oceans. Ongoing effects include rising sea levels due to thermal expansion and melting of glaciers and ice sheets, and warming of the ocean
+                surface, leading to increased temperature stratification. (Wikipidia)</div>
+            </div>
+          </div>
+          <div id=plasticHover class="col-12 col-md-4 my-2 mx-2 px-0 mx-md-0 px-md-2">
+            <img class="greenimg img-fluid" src="../img/sea.jpg" alt="Plastic in the sea">
+            <div id=plastic class="overlay">
+              <div id=plasticText class="text">Plastic takes a long time to decompose and can put toxic chemicals in our soil and water, which can have an impact on human health. Wildlife can also get entangled in the plastic or if they mistake it for food they can choke or starve to death.</div>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
+
   </main>
 
   <footer>
-    <div class="footer">
+    <div class="footer p-1">
       <div class="icons">
         <a href="https://www.facebook.com/thelittlegreenlarder/" target="_blank"><em class="fab fa-facebook-square fa-2x"></em></a>
         <a href="https://www.instagram.com/thelittlegreenlarder/" target="_blank"><em class="fab fa-instagram fa-2x"></em></a>
-     </div>
+      </div>
     </div>
   </footer>
-
-  <!-- Script for map from https://docs.mapbox.com/help/tutorials/custom-markers-gl-js/ -->
-  <script src="../script/shop.js" charset="utf-8"></script>
 
   <!-- Bootstrap javascripts -->
   <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
 </body>
+
 
 </html>
