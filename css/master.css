@@ -72,6 +72,91 @@ h1 {
   -webkit-text-stroke-color: #3A9B67;
 }
 
+#green-container {
+  margin-top: 100px;
+}
+
+.greenimg {
+  display: inline-block;
+  width: 100%;
+  height: auto;
+}
+
+#plastic.overlay {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+  width: 100%;
+  opacity: 0;
+  transition: .5s ease;
+  background-color: rgb(86, 204, 157);
+}
+
+#foods.overlay {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+  width: 100%;
+  opacity: 0;
+  transition: .5s;
+  background-color: rgb(86, 204, 157);
+}
+
+#global.overlay {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+  width: 100%;
+  opacity: 0;
+  transition: .5s ease;
+  background-color: rgb(86, 204, 157);
+}
+
+#plasticHover:hover .overlay {
+  opacity: 1;
+}
+
+#globalHover:hover .overlay {
+  opacity: 1;
+}
+
+#foodsHover:hover .overlay {
+  opacity: 1;
+}
+
+.text {
+  color: white;
+  font-size: 15px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+#globalText {
+  font-size: 13px;
+}
+
+#plasticText {
+  font-size: 13px;
+}
+
+#greenPara {
+  font-size: 20px;
+}
+
 /* Make the texts bigger on larger screens */
 @media (min-width: 576px) {
   h1 {
