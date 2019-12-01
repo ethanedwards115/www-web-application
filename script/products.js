@@ -558,7 +558,7 @@ function displayProducts() {
     });
 }
 
-function addToBasket(i, j) {
+function loadBasket() {
 
   var basket = localStorage.getItem('basket');
 
@@ -569,6 +569,13 @@ function addToBasket(i, j) {
   } else {
     basket = JSON.parse(basket);
   }
+
+  return basket;
+}
+
+function addToBasket(i, j) {
+
+  var basket = loadBasket();
 
   console.log(basket);
 
@@ -599,23 +606,15 @@ function addToBasket(i, j) {
     });
 }
 
-function clearChildren(el){
+function clearChildren(el) {
   while (el.firstChild) {
     el.removeChild(el.firstChild);
   }
 }
 
-function displayBasket(){
+function displayBasket() {
 
-  var basket = localStorage.getItem('basket');
-
-  if (basket === null) {
-    basket = {
-      products: []
-    };
-  } else {
-    basket = JSON.parse(basket);
-  }
+  var basket = loadBasket();
 
   var basketList = document.getElementById('basket');
   clearChildren(basketList);
@@ -626,16 +625,42 @@ function displayBasket(){
     var itemName = document.createElement('td');
     var amount = document.createElement('td');
     var price = document.createElement('td');
+    var removeItemButton = document.createElement('button');
+
+    removeItemButton.setAttribute('class', 'badge badge-danger');
+    removeItemButton.setAttribute('onclick', 'removeBasketItem(' + i + ')');
 
     itemName.innerHTML = `${items[i].name}`;
     amount.innerHTML = `${items[i].amount}`;
-    price.innerHTML = `${'£'+items[i].price.toFixed(2)}`;
+    price.innerHTML = `${'£'+items[i].price.toFixed(2)}` + " ";
+    removeItemButton.innerHTML = 'X';
 
+    append(price, removeItemButton);
     append(row, itemName);
     append(row, amount);
     append(row, price);
     append(basketList, row);
   }
+}
+
+function removeBasketItem(i) {
+
+  var basket = loadBasket();
+
+  var promise = Promise.resolve(basket);
+
+
+  console.log(basket);
+
+  basket.products.splice(i, 1);
+
+  basket = JSON.stringify(basket);
+  console.log(basket);
+
+  localStorage.setItem('basket', basket);
+
+  displayBasket();
+
 }
 
 //setFilterTags();
