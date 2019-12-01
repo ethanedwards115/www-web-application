@@ -1,17 +1,10 @@
-.table {
-  float: left;
-}
 .card {
   width: 15rem;
   height: auto;
 }
 
-.grid-15 {
+.basket {
   float: left;
-}
-
-.grid-85 {
-  float: right;
 }
 
 ul {
