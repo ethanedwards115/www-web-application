@@ -41,6 +41,10 @@ main {
   background: linear-gradient(360deg, rgba(2, 0, 36, 1) 0%, rgba(9, 9, 121, 1) 0%, rgba(86, 204, 157, 1) 0%, rgba(0, 212, 255, 1) 100%);
 }
 
+.imgCentre{
+  object-fit:cover;
+}
+
 .footer {
   /* Shrink the footer to the content's size */
   flex-shrink: 0;
