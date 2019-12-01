@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <link rel="stylesheet" href="../css/bootstrap.css">
+  <link rel="stylesheet" href="../css/recipes.css">
+  <!-- <link rel="stylesheet" href="../css/master.css"> -->
+  <link rel="apple-touch-icon" sizes="57x57" href="../pictures/apple-icon-57x57.png">
+  <link rel="apple-touch-icon" sizes="60x60" href="../pictures/apple-icon-60x60.png">
+  <link rel="apple-touch-icon" sizes="72x72" href="../pictures/apple-icon-72x72.png">
+  <link rel="apple-touch-icon" sizes="76x76" href="../pictures/apple-icon-76x76.png">
+  <link rel="apple-touch-icon" sizes="114x114" href="../pictures/apple-icon-114x114.png">
+  <link rel="apple-touch-icon" sizes="120x120" href="../pictures/apple-icon-120x120.png">
+  <link rel="apple-touch-icon" sizes="144x144" href="../pictures/apple-icon-144x144.png">
+  <link rel="apple-touch-icon" sizes="152x152" href="../pictures/apple-icon-152x152.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="../pictures/apple-icon-180x180.png">
+  <link rel="icon" type="image/png" sizes="192x192" href="../pictures/android-icon-192x192.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="../pictures/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="96x96" href="../pictures/favicon-96x96.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="../pictures/favicon-16x16.png">
+  <link rel="manifest" href="/manifest.json">
+  <link rel="javaScript" href="../javaScript/javaScript.js">
+  <meta name="msapplication-TileColor" content="#ffffff">
+  <meta name="msapplication-TileImage" content="../pictures/ms-icon-144x144.png">
+  <meta name="theme-color" content="#ffffff">
+
+  <title>Green Living - Recipes</title>
+
+</head>
+
+<body class="min-vh-100">
+  <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+    <a class="navbar-brand" href="#">Green Living Dundee</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarColor01" aria-controls="navbarColor01" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarColor01">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item">
+          <a class="nav-link" href="#">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">The Enviroment</a>
+        </li>
+        <li class="nav-item active">
+          <a class="nav-link" href="#">Recipes <span class="sr-only">(current)</span></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="https://thelittlegreenblogger.com/index.php/home/" target="_blank" >Blog</a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+
+
+  <main>
+    <div class="container">
+      <h1 class="shop-name">Recipes</h1>
+      <div id="edamam-badge" data-color="white"></div>
+      <div class="form-group">
+        <form class="" action="#" onsubmit="getRecipes()">
+          <label for="recipeTitle">Recipe Search Box - Search for ingredients, dietary or health requirements</label>
+          <input type="text" class="form-control" id="recipeTitle">
+          <button id="button" type='button' class="btn btn-primary mb-4" onclick="getRecipes()">Find my Recipe</button>
+        </form>
+      </div>
+      <div class="row">
+        <div class="card-group" id="recipes">
+
+        </div>
+      </div>
+    </div>
+
+</body>
+
+
+<script type="text/javascript">
+  var appId = "89ffb0f4";
+  var appKey = "5bf4b71458e151b43f4ad1c2b5bdbb23";
+  const recipeContainer = document.getElementById('recipes');
+
+  var input = document.getElementById("recipeTitle");
+  input.addEventListener("keyup", function(event) {
+    console.log('added event listener');
+    if (event.keyCode === 13) {
+      event.preventDefault();
+    }
+  });
+
+
+  function createNode(element) {
+    return document.createElement(element);
+  }
+
+  function append(parent, el) {
+    return parent.appendChild(el);
+  }
+
+  function getRecipes() {
+    document.getElementById("recipes").innerHTML = "";
+    searchString = document.getElementById("recipeTitle").value;
+    url = `https://api.edamam.com/search?app_id=${appId}&app_key=${appKey}&from=0&to=20&q=${searchString}`;
+
+    console.log(url);
+    fetch(url)
+      .then((resp) => resp.json())
+      .then(function(data) {
+        console.log(data);
+        let recipes = data.hits;
+        return recipes.map(function(element) {
+          div = createNode('div');
+          div.setAttribute('class', 'col-sm-3 mb-2')
+
+          recipeImage = element.recipe.image;
+          recipeTitle = element.recipe.label;
+          recipeSource = element.recipe.source;
+          recipeIngredients = element.recipe.ingredientLines.toString();
+          recipeURL = element.recipe.url;
+
+          div.innerHTML = "<div class='card border-success mb-3 mx-auto my-3'><img class='card-img-top' src=" + recipeImage + "><div class='card-body'><h5 class='card-title'>" + recipeTitle + "</h5><p class='card-text'>" + recipeSource +
+            "</p><a class=\"btn btn-primary card-text\" href=\"" + recipeURL + "\" target=\"_blank\" >Go to recipe</a></div>";
+          append(recipeContainer, div);
+        })
+      })
+      .catch(function(error) {
+        console.log(error);
+      });
+  };
+</script>
+</main>
+
+<footer>
+  <div class="footer">
+    <div class="icons">
+      <a href="https://www.facebook.com/thelittlegreenlarder/" target="_blank"><em class="fab fa-facebook-square fa-2x"></em></a>
+      <a href="https://www.instagram.com/thelittlegreenlarder/" target="_blank"><em class="fab fa-instagram fa-2x"></em></a>
+    </div>
+  </div>
+</footer>
+</body>
+
+<script src="https://kit.fontawesome.com/6854d7f83d.js" crossorigin="anonymous"></script>
+<script src="https://developer.edamam.com/attribution/badge.js"></script>
+
+</html>
