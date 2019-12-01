@@ -13,6 +13,16 @@ body {
   flex-shrink: 0;
 }
 
+.basket-link {
+  position: relative;
+}
+
+.basket-items-count {
+  position: absolute;
+  top: 27px;
+  left: 30px;
+}
+
 main {
   /* Make main as big as possible */
   flex: 1 0 auto;
