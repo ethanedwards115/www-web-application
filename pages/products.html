@@ -8,7 +8,7 @@
   <link rel="stylesheet" href="../css/products.css">
   <link rel="stylesheet" href="../css/master.css">
   <script src="https://kit.fontawesome.com/6854d7f83d.js" crossorigin="anonymous"></script>
-  <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+  <script src="../script/jquery-3.4.1.slim.min.js"></script>
   <script src="https://unpkg.com/popper.js"></script>
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
 
@@ -50,26 +50,26 @@
       <h1 class="shop-name">OUR <span id="dundee">PRODUCTS</span></h1>
     </div>
 
-    <div class="grid-20">
-      <div class="basket">
-        <h3>Basket</h3>
-        <table class="table">
-          <thead>
-            <tr class="table-primary">
-              <th scope="col">Item</th>
-              <th scope="col">Amount</th>
-              <th scope="col">Price</th>
-            </tr>
-          </thead>
-          <tbody class="table-striped" id="basket">
+    <div class="basket grid-25">
 
-          </tbody>
-        </table>
-      </div>
+      <h3>Basket</h3>
+      <table class="table table-striped">
+        <thead>
+          <tr class="table-primary">
+            <th scope="col">Item</th>
+            <th scope="col">Amount</th>
+            <th scope="col">Price</th>
+          </tr>
+        </thead>
+        <tbody class="table-striped" id="basket">
+
+        </tbody>
+      </table>
     </div>
 
+
     <!-- used for displaying product items in JS-->
-    <ul class="grid-80" id="products-container"></ul>
+    <ul class="grid-75" id="products-container"></ul>
 
   </main>
 
