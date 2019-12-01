@@ -7,7 +7,7 @@
   float: left;
 }
 
-ul {
+#products-container {
   margin: 10px auto;
   display: flex;
   flex-wrap: wrap;
