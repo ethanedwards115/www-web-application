@@ -682,9 +682,8 @@ function displayProducts() {
         for (var j = 0; j < items[i].length; j++) {
 
           let li = createNode('li'),
-            div1 = createNode('div'),
             img = createNode('img'),
-            div2 = createNode('div'),
+            cardBody = createNode('div'),
             name = createNode('h5'),
             stock = createNode('p'),
             price = createNode('p'),
@@ -697,10 +696,10 @@ function displayProducts() {
           price.innerHTML = `${items[i][j].price}`;
           basketButton.innerHTML = 'Add to basket';
 
-          div1.setAttribute('class', 'card');
+          li.setAttribute('class', 'card m-2');
           //div1.setAttribute('style', 'width: 18rem;');
           img.setAttribute('class', 'card-img-top');
-          div2.setAttribute('class', 'card-body');
+          cardBody.setAttribute('class', 'card-body');
           name.setAttribute('class', 'card-title');
           stock.setAttribute('class', 'card-text');
           price.setAttribute('class', 'card-text');
@@ -709,13 +708,12 @@ function displayProducts() {
           basketButton.setAttribute('onclick', 'addToBasket(' + i + ', ' + j + ')');
 
           try {
-            append(li, div1);
-            append(div1, img);
-            append(div1, div2);
-            append(div2, name);
-            append(div2, stock);
-            append(div2, price);
-            append(div2, basketButton);
+            append(li, img);
+            append(li, cardBody);
+            append(cardBody, name);
+            append(cardBody, stock);
+            append(cardBody, price);
+            append(cardBody, basketButton);
 
             append(li, span);
             append(container, li);
