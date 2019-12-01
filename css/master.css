@@ -271,11 +271,6 @@ h1 {
   font-family: 'Open Sans', sans-serif;
 }
 
-/* Icons in the footer */
-.fab {
-  color: #FFFFFF;
-}
-
 #card-title {
   color: black;
 }
@@ -284,6 +279,11 @@ h1 {
   margin-top: 23px;
 }
 
+.divider {
+  height: 10px;
+}
+
+/* Icons in the footer */
 .fab {
   color: #FFFFFF;
 }
