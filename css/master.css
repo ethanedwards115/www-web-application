@@ -31,7 +31,7 @@ main {
   -webkit-text-stroke-color: black;
 }
 
-#dundee{
+#dundee {
   -webkit-text-stroke-color: #3A9B67;
   font-size: 50px;
 }
@@ -44,7 +44,6 @@ main {
 .footer {
   /* Shrink the footer to the content's size */
   flex-shrink: 0;
-
   /* Make it as width as the screen (body) */
   width: 100%;
   background-color: #56CC9D;
@@ -60,10 +59,8 @@ h1 {
 .shop-name {
   /* Always display the shop's name together */
   display: inline-block;
-
   text-transform: uppercase;
   letter-spacing: 2px;
-
   /* Make the font hollow */
   -webkit-text-fill-color: white;
   -webkit-text-stroke-width: 2px;
@@ -90,7 +87,7 @@ h1 {
     -webkit-text-stroke-width: 3px;
   }
 
-  #dundee{
+  #dundee {
     font-size: 60px;
   }
 }
@@ -109,7 +106,7 @@ h1 {
     -webkit-text-stroke-width: 3.5px;
   }
 
-  #dundee{
+  #dundee {
     font-size: 70px;
   }
 }
@@ -128,7 +125,7 @@ h1 {
     -webkit-text-stroke-width: 4px;
   }
 
-  #dundee{
+  #dundee {
     font-size: 80px;
   }
 }
@@ -147,7 +144,7 @@ h1 {
     -webkit-text-stroke-width: 5px;
   }
 
-  #dundee{
+  #dundee {
     font-size: 90px;
   }
 }
@@ -181,10 +178,8 @@ h1 {
 
 /* Icons in the footer */
 .fab {
- color: #FFFFFF;
+  color: #FFFFFF;
 }
-
-
 
 #card-title {
   color: black;
