@@ -457,34 +457,203 @@ var products = {
         price: "£2.95/kg"
       }
     ],
-    [{
-      category: "herbs and spices",
-      name: "xxx",
-      img: "",
-      stock: "0.00kg",
-      price: "£2.95/kg"
-    }],
-    [{
-      category: "tea",
-      name: "xxx",
-      img: "",
-      stock: "0.00kg",
-      price: "£2.95/kg"
-    }],
-    [{
-      category: "gluten-free",
-      name: "xxx",
-      img: "",
-      stock: "0.00kg",
-      price: "£2.95/kg"
-    }],
-    [{
-      category: "dog biscuits",
-      name: "xxx",
-      img: "",
-      stock: "0.00kg",
-      price: "£2.95/kg"
-    }]
+    [
+      {
+        category: "herbs and spices",
+        name: "Basil",
+        img: "",
+        stock: "0.00kg",
+        price: "£2.95/kg"
+      },
+      {
+        category: "herbs and spices",
+        name: "Cajun spice blend",
+        img: "",
+        stock: "0.00kg",
+        price: "£2.95/kg"
+      },
+      {
+        category: "herbs and spices",
+        name: "Cayenne pepper",
+        img: "",
+        stock: "0.00kg",
+        price: "£2.95/kg"
+      },
+      {
+        category: "herbs and spices",
+        name: "Chilli (ground)",
+        img: "",
+        stock: "0.00kg",
+        price: "£2.95/kg"
+      },
+      {
+        category: "herbs and spices",
+        name: "Chinese 5 spice",
+        img: "",
+        stock: "0.00kg",
+        price: "£2.95/kg"
+      },
+      {
+        category: "herbs and spices",
+        name: "Cinnamon",
+        img: "",
+        stock: "0.00kg",
+        price: "£2.95/kg"
+      },
+      {
+        category: "herbs and spices",
+        name: "Coriander (ground)",
+        img: "",
+        stock: "0.00kg",
+        price: "£2.95/kg"
+      },
+      {
+        category: "herbs and spices",
+        name: "Cumin (ground)",
+        img: "",
+        stock: "0.00kg",
+        price: "£2.95/kg"
+      },
+      {
+        category: "herbs and spices",
+        name: "Curry powder (medium)",
+        img: "",
+        stock: "0.00kg",
+        price: "£2.95/kg"
+      },
+      {
+        category: "herbs and spices",
+        name: "Garam masala",
+        img: "",
+        stock: "0.00kg",
+        price: "£2.95/kg"
+      },
+      {
+        category: "herbs and spices",
+        name: "Garlic powder",
+        img: "",
+        stock: "0.00kg",
+        price: "£2.95/kg"
+      },
+      {
+        category: "herbs and spices",
+        name: "Ginger (ground)",
+        img: "",
+        stock: "0.00kg",
+        price: "£2.95/kg"
+      },
+      {
+        category: "herbs and spices",
+        name: "Mixed herbs (organic)",
+        img: "",
+        stock: "0.00kg",
+        price: "£2.95/kg"
+      },
+      {
+        category: "herbs and spices",
+        name: "Oregano",
+        img: "",
+        stock: "0.00kg",
+        price: "£2.95/kg"
+      },
+      {
+        category: "herbs and spices",
+        name: "Paprika (smoked, pimento)",
+        img: "",
+        stock: "0.00kg",
+        price: "£2.95/kg"
+      },
+      {
+        category: "herbs and spices",
+        name: "Paprika (Spanish)",
+        img: "",
+        stock: "0.00kg",
+        price: "£2.95/kg"
+      },
+      {
+        category: "herbs and spices",
+        name: "Star anise",
+        img: "",
+        stock: "0.00kg",
+        price: "£2.95/kg"
+      },
+      {
+        category: "herbs and spices",
+        name: "Tumeric",
+        img: "",
+        stock: "0.00kg",
+        price: "£2.95/kg"
+      },
+      {
+        category: "herbs and spices",
+        name: "Za'tar spice",
+        img: "",
+        stock: "0.00kg",
+        price: "£2.95/kg"
+      }
+    ],
+    [
+      {
+        category: "tea",
+        name: "Earl grey special tea",
+        img: "",
+        stock: "0.00kg",
+        price: "£2.95/kg"
+      },
+      {
+        category: "tea",
+        name: "Green tea with jasmine petals",
+        img: "",
+        stock: "0.00kg",
+        price: "£2.95/kg"
+      },
+      {
+        category: "tea",
+        name: "Peach garden infusion",
+        img: "",
+        stock: "0.00kg",
+        price: "£2.95/kg"
+      }
+    ],
+    [
+      {
+        category: "gluten-free",
+        name: "Fusilli pasta (gluten-free)",
+        img: "",
+        stock: "0.00kg",
+        price: "£2.95/kg"
+      },
+      {
+        category: "gluten-free",
+        name: "Spaghetti (gluten-free)",
+        img: "",
+        stock: "0.00kg",
+        price: "£2.95/kg"
+      }
+    ],
+    [
+      {
+        category: "dog biscuits",
+        name: "Gravy bones",
+        img: "",
+        stock: "0.00kg",
+        price: "£2.95/kg"
+      },
+      {
+        category: "dog biscuits",
+        name: "Mini bonios",
+        img: "",
+        stock: "0.00kg",
+        price: "£2.95/kg"
+      },
+      {
+        category: "dog biscuits",
+        name: "Mixed dog biscuits",
+        img: "",
+        stock: "0.00kg",
+        price: "£2.95/kg"
+      }
+    ]
   ]
 };
 
