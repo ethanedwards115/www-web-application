@@ -94,7 +94,9 @@ function addToBasket(i, j) {
 
   console.log(basket);
 
+
   fetch(uri)
+
   .then((response) => response.json())
   .then((json) => json.items)
     .then(function(items) {
