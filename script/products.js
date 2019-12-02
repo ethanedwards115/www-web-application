@@ -657,8 +657,6 @@
 //   ]
 // };
 
-console.log(products);
-
 function getProducts(){
 
 }
