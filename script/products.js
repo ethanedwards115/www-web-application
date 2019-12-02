@@ -740,6 +740,14 @@ function loadBasket() {
   return basket;
 }
 
+function countBasketItems() {
+  var basket = loadBasket();
+
+  var basketCounter = document.getElementById('basketCounter');
+
+  basketCounter.innerHTML = `${basket.products.length}`
+}
+
 function addToBasket(i, j) {
 
   var basket = loadBasket();
@@ -808,6 +816,7 @@ function displayBasket() {
     append(row, price);
     append(basketList, row);
   }
+  countBasketItems();
 }
 
 function removeBasketItem(i) {
@@ -827,7 +836,6 @@ function removeBasketItem(i) {
   localStorage.setItem('basket', basket);
 
   displayBasket();
-
 }
 
 //setFilterTags();
