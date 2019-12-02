@@ -8,76 +8,116 @@ function append(parent, element) {
   parent.appendChild(element);
 }
 
-function displayProducts() {
+function displayProducts(products = getProducts()) {
 
   var container = document.getElementById("products-container");
 
-  fetch(uri)
+  clearChildren(container);
+
+  products.then(function(items) {
+
+    for (var i = 0; i < items.length; i++) {
+      for (var j = 0; j < items[i].length; j++) {
+
+        let li = createNode('li'),
+          img = createNode('img'),
+          cardBody = createNode('div'),
+          name = createNode('h5'),
+          stock = createNode('p'),
+          price = createNode('p'),
+          label = createNode('label')
+        selector = createNode('select'),
+          basketButton = createNode('button'),
+          span = createNode('span');
+
+        img.src = items[i][j].img;
+        name.innerHTML = `${items[i][j].name}`;
+        stock.innerHTML = `Stock: ${items[i][j].stock.toFixed(2)}kg`;
+        price.innerHTML = `Price: £${items[i][j].price.toFixed(2)}/kg`;
+        label.innerHTML = 'Select amount: '
+        basketButton.innerHTML = 'Add to basket';
+
+        li.setAttribute('class', 'card m-2');
+        img.setAttribute('class', 'card-img-top');
+        cardBody.setAttribute('class', 'card-body');
+        name.setAttribute('class', 'card-title');
+        stock.setAttribute('class', 'card-text');
+        price.setAttribute('class', 'card-text');
+        label.setAttribute('for', 'selector' + i + j);
+        label.setAttribute('class', 'mr-2')
+        selector.setAttribute('id', 'selector' + i + j);
+        basketButton.setAttribute('class', 'btn btn-primary');
+        basketButton.setAttribute('type', 'button');
+        basketButton.setAttribute('onclick', 'addToBasket(' + i + ', ' + j + ')');
+
+        try {
+          append(li, img);
+          append(li, cardBody);
+          append(cardBody, name);
+          append(cardBody, stock);
+          append(cardBody, price);
+          append(cardBody, label);
+          append(cardBody, selector);
+          for (var k = 100; k < 600; k += 100) {
+            let value = k;
+            let option = document.createElement('option');
+
+            option.setAttribute('value', value);
+            option.innerHTML = value + 'g';
+
+            append(selector, option);
+          }
+          append(cardBody, basketButton);
+
+          append(li, span);
+          append(container, li);
+        } catch (e) {
+          console.log(e);
+        }
+        console.log('card created!')
+      }
+    }
+  });
+}
+
+function getProducts() {
+  return fetch(uri)
     .then((response) => response.json())
-    .then((json) => json.items)
-    .then(function(items) {
+    .then((json) => json.items);
+}
+
+function getFilteredProducts(filterValue, byCategory = true) {
+
+  if (filterValue == 'None') {
+    return;
+  } else {
+    let products = getProducts();
+
+    return products.then(function(items) {
+
+      filteredProducts = [];
 
       for (var i = 0; i < items.length; i++) {
         for (var j = 0; j < items[i].length; j++) {
-
-          let li = createNode('li'),
-            img = createNode('img'),
-            cardBody = createNode('div'),
-            name = createNode('h5'),
-            stock = createNode('p'),
-            price = createNode('p'),
-            label = createNode('label')
-            selector = createNode('select'),
-            basketButton = createNode('button'),
-            span = createNode('span');
-
-          img.src = items[i][j].img;
-          name.innerHTML = `${items[i][j].name}`;
-          stock.innerHTML = `Stock: ${items[i][j].stock.toFixed(2)}kg`;
-          price.innerHTML = `Price: £${items[i][j].price.toFixed(2)}/kg`;
-          label.innerHTML = 'Select amount: '
-          basketButton.innerHTML = 'Add to basket';
-
-          li.setAttribute('class', 'card m-2');
-          img.setAttribute('class', 'card-img-top');
-          cardBody.setAttribute('class', 'card-body');
-          name.setAttribute('class', 'card-title');
-          stock.setAttribute('class', 'card-text');
-          price.setAttribute('class', 'card-text');
-          label.setAttribute('for', 'selector' + i + j);
-          label.setAttribute('class', 'mr-2')
-          selector.setAttribute('id', 'selector' + i + j);
-          basketButton.setAttribute('class', 'btn btn-primary');
-          basketButton.setAttribute('type', 'button');
-          basketButton.setAttribute('onclick', 'addToBasket(' + i + ', ' + j + ')');
-
-          try {
-            append(li, img);
-            append(li, cardBody);
-            append(cardBody, name);
-            append(cardBody, stock);
-            append(cardBody, price);
-            append(cardBody, label);
-            append(cardBody, selector);
-            for (var k = 100; k < 600; k += 100) {
-              let value = k;
-              let option = document.createElement('option');
-
-              option.setAttribute('value', value);
-              option.innerHTML = value + 'g';
-
-              append(selector, option);
+          console.log(i + ', ' + j);
+          if (byCategory) {
+            if (items[i][j].category == filterValue) {
+              filteredProducts.push(items[i]);
+              console.log('pushed at: ' + i + ', ' + j);
+              break;
             }
-            append(cardBody, basketButton);
-
-            append(li, span);
-            append(container, li);
-          } catch (e) {
-            console.log(e);
+          } else {
+            if (items[i][j].name.includes(filterValue)) {
+              filteredProducts.push(items[i]);
+              break;
+            }
           }
         }
       }
+      console.log(filteredProducts);
+      return filteredProducts;
     });
+  }
 }
 
 function loadBasket() {
@@ -109,34 +149,28 @@ function addToBasket(i, j) {
 
   var basket = loadBasket();
 
-  console.log(basket);
+  getProducts().then(function(items) {
 
+    //basket = JSON.parse(basket);
 
-  fetch(uri)
-    .then((response) => response.json())
-    .then((json) => json.items)
-    .then(function(items) {
+    let amount = document.getElementById('selector' + i + j).value;
 
-      //basket = JSON.parse(basket);
+    console.log(basket);
+    console.log(items[i][j].name);
 
-      let amount = document.getElementById('selector' + i + j).value;
+    basket.products.push({
+      "name": items[i][j].name,
+      "amount": amount + 'g',
+      "price": items[i][j].price * amount / 1000
+    })
 
-      console.log(basket);
-      console.log(items[i][j].name);
+    basket = JSON.stringify(basket);
+    console.log(basket);
 
-      basket.products.push({
-        "name": items[i][j].name,
-        "amount": amount + 'g',
-        "price": items[i][j].price * amount/1000
-      })
+    localStorage.setItem('basket', basket);
 
-      basket = JSON.stringify(basket);
-      console.log(basket);
-
-      localStorage.setItem('basket', basket);
-
-      displayBasket();
-    });
+    displayBasket();
+  });
 }
 
 function clearChildren(el) {
@@ -188,27 +222,43 @@ function displayBasket() {
   countBasketItems();
 }
 
+function setFilterTags() {
+  let products = getProducts();
+
+  products.then(function(items) {
+
+    let filterList = document.getElementById('filterSelector');
+
+    for (var i = 0; i < items.length; i++) {
+
+      let option = document.createElement('option');
+
+      option.setAttribute('value', items[i][0].category);
+      option.innerHTML = items[i][0].category;
+      append(filterList, option);
+    }
+
+    filterList.addEventListener('change', function() {
+      var value = filterList.value;
+
+      var filteredProducts = getFilteredProducts(value);
+      displayProducts(filteredProducts);
+    });
+  });
+}
+
 function removeBasketItem(i) {
 
   var basket = loadBasket();
 
-  var promise = Promise.resolve(basket);
-
-
-  console.log(basket);
-
   basket.products.splice(i, 1);
 
   basket = JSON.stringify(basket);
-  console.log(basket);
-
   localStorage.setItem('basket', basket);
 
   displayBasket();
 }
 
-//setFilterTags();
+setFilterTags();
 displayProducts();
 displayBasket();
-
-console.log(localStorage.getItem('basket'));
