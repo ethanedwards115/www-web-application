@@ -1,4 +1,4 @@
-const uri = 'https://api.myjson.com/bins/n5oam';
+const uri = 'https://api.myjson.com/bins/owhva';
 
 function createNode(element) {
   return document.createElement(element);
@@ -31,8 +31,8 @@ function displayProducts() {
 
           img.src = items[i][j].img;
           name.innerHTML = `${items[i][j].name}`;
-          stock.innerHTML = `${items[i][j].stock}`;
-          price.innerHTML = `${items[i][j].price}`;
+          stock.innerHTML = `Stock: ${items[i][j].stock.toFixed(2)}kg`;
+          price.innerHTML = `Price: £${items[i][j].price.toFixed(2)}/kg`;
           basketButton.innerHTML = 'Add to basket';
 
           li.setAttribute('class', 'card m-2');
@@ -110,7 +110,7 @@ function addToBasket(i, j) {
       basket.products.push({
         "name": items[i][j].name,
         "amount": "100g",
-        "price": 2.5
+        "price": 0.25
       })
 
       basket = JSON.stringify(basket);
