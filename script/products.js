@@ -1,3 +1,6 @@
+
+const uri = 'https://api.myjson.com/bins/n5oam';
+
 function createNode(element) {
   return document.createElement(element);
 }
@@ -7,8 +10,6 @@ function append(parent, element) {
 }
 
 function displayProducts() {
-
-  const uri = 'https://api.myjson.com/bins/n5oam';
 
   var container = document.getElementById("products-container");
 
@@ -93,11 +94,9 @@ function addToBasket(i, j) {
 
   console.log(basket);
 
-  var promise = Promise.resolve(products);
-
-  promise.then(function(json) {
-      return json.items;
-    })
+  fetch()
+  .then((response) => response.json())
+  .then((json) => json.items)
     .then(function(items) {
 
       //basket = JSON.parse(basket);
