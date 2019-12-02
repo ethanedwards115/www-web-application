@@ -148,7 +148,7 @@ function displayBasket() {
 
     itemName.innerHTML = `${items[i].name}`;
     amount.innerHTML = `${items[i].amount}`;
-    price.innerHTML = `${'£'+items[i].price.toFixed(2)}` + " ";
+    price.innerHTML = `£${items[i].price.toFixed(2)} `;
     removeItemButton.innerHTML = 'X';
 
     append(price, removeItemButton);
