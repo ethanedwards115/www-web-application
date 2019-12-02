@@ -88,7 +88,9 @@ function getProducts() {
 
 function getFilteredProducts(filterValue, byCategory = true) {
 
-  if (filterValue == 'None') {
+  console.log(filterValue);
+
+  if (filterValue == 'default') {
     return;
   } else {
     let products = getProducts();
