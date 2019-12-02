@@ -1,4 +1,3 @@
-
 const uri = 'https://api.myjson.com/bins/n5oam';
 
 function createNode(element) {
@@ -14,8 +13,8 @@ function displayProducts() {
   var container = document.getElementById("products-container");
 
   fetch(uri)
-  .then((response) => response.json())
-  .then((json) => json.items)
+    .then((response) => response.json())
+    .then((json) => json.items)
     .then(function(items) {
 
       for (var i = 0; i < items.length; i++) {
@@ -83,9 +82,11 @@ function loadBasket() {
 function countBasketItems() {
   var basket = loadBasket();
 
-  var basketCounter = document.getElementById('basketCounter');
+  var basketCounters = document.getElementsByClassName('basket-counter');
 
-  basketCounter.innerHTML = `${basket.products.length}`
+  for (var i = 0; i < basketCounters.length; i++) {
+    basketCounters[i].innerHTML = `${basket.products.length}`
+  }
 }
 
 function addToBasket(i, j) {
@@ -97,8 +98,8 @@ function addToBasket(i, j) {
 
   fetch(uri)
 
-  .then((response) => response.json())
-  .then((json) => json.items)
+    .then((response) => response.json())
+    .then((json) => json.items)
     .then(function(items) {
 
       //basket = JSON.parse(basket);
