@@ -6,7 +6,7 @@
 .basket {
   align-self: flex-start;
   overflow-y: scroll;
-  height: 100vh;
+  max-height: 30vh;
 
   scrollbar-width: thin;
 
@@ -16,7 +16,14 @@
 
 /* Hide scrollbar for Chrome, Safari and Opera */
 .basket::-webkit-scrollbar {
- display: none;
+  display: none;
+}
+
+/* Large devices (desktops, 992px and up) */
+@media (min-width: 992px) {
+  .basket {
+    height: 100vh;
+  }
 }
 
 #products-container {
