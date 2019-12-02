@@ -136,26 +136,37 @@ function displayBasket() {
   clearChildren(basketList);
 
   items = basket.products;
-  for (var i = 0; i < items.length; i++) {
-    var row = document.createElement('tr');
-    var itemName = document.createElement('td');
-    var amount = document.createElement('td');
-    var price = document.createElement('td');
-    var removeItemButton = document.createElement('button');
 
-    removeItemButton.setAttribute('class', 'badge badge-danger');
-    removeItemButton.setAttribute('onclick', 'removeBasketItem(' + i + ')');
+  var head = document.getElementById('basketHead');
+  var noItemsText = document.getElementById('noItemsText');
+  if (items.length == 0) {
+    head.setAttribute("class", "d-none");
+    noItemsText.setAttribute("class", "")
+  } else {
+    head.setAttribute("class", "");
+    noItemsText.setAttribute("class", "d-none");
 
-    itemName.innerHTML = `${items[i].name}`;
-    amount.innerHTML = `${items[i].amount}`;
-    price.innerHTML = `£${items[i].price.toFixed(2)} `;
-    removeItemButton.innerHTML = 'X';
+    for (var i = 0; i < items.length; i++) {
+      var row = document.createElement('tr');
+      var itemName = document.createElement('td');
+      var amount = document.createElement('td');
+      var price = document.createElement('td');
+      var removeItemButton = document.createElement('button');
 
-    append(price, removeItemButton);
-    append(row, itemName);
-    append(row, amount);
-    append(row, price);
-    append(basketList, row);
+      removeItemButton.setAttribute('class', 'badge badge-danger');
+      removeItemButton.setAttribute('onclick', 'removeBasketItem(' + i + ')');
+
+      itemName.innerHTML = `${items[i].name}`;
+      amount.innerHTML = `${items[i].amount}`;
+      price.innerHTML = `£${items[i].price.toFixed(2)} `;
+      removeItemButton.innerHTML = 'X';
+
+      append(price, removeItemButton);
+      append(row, itemName);
+      append(row, amount);
+      append(row, price);
+      append(basketList, row);
+    }
   }
   countBasketItems();
 }
