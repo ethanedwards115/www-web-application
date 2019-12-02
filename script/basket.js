@@ -8,6 +8,14 @@ if (basket === null) {
   basket = JSON.parse(basket);
 }
 
+function countBasketItems() {
+  var basketCounters = document.getElementsByClassName('basket-counter');
+
+  for (var i = 0; i < basketCounters.length; i++) {
+    basketCounters[i].innerHTML = `${basket.products.length}`
+  }
+}
+
 console.log(basket);
 
 let tableBody = document.getElementById('basket-table').getElementsByTagName('tbody')[0];
@@ -75,3 +83,5 @@ function sendOrder() {
   let form = document.getElementById('order');
   form.reset();
 }
+
+window.onload = countBasketItems();
