@@ -110,7 +110,7 @@ function addToBasket(i, j) {
       basket.products.push({
         "name": items[i][j].name,
         "amount": "100g",
-        "price": 0.25
+        "price": items[i][j].price
       })
 
       basket = JSON.stringify(basket);
