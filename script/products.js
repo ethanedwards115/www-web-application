@@ -26,6 +26,8 @@ function displayProducts() {
             name = createNode('h5'),
             stock = createNode('p'),
             price = createNode('p'),
+            label = createNode('label')
+            selector = createNode('select'),
             basketButton = createNode('button'),
             span = createNode('span');
 
@@ -33,15 +35,18 @@ function displayProducts() {
           name.innerHTML = `${items[i][j].name}`;
           stock.innerHTML = `Stock: ${items[i][j].stock.toFixed(2)}kg`;
           price.innerHTML = `Price: £${items[i][j].price.toFixed(2)}/kg`;
+          label.innerHTML = 'Select amount: '
           basketButton.innerHTML = 'Add to basket';
 
           li.setAttribute('class', 'card m-2');
-          //div1.setAttribute('style', 'width: 18rem;');
           img.setAttribute('class', 'card-img-top');
           cardBody.setAttribute('class', 'card-body');
           name.setAttribute('class', 'card-title');
           stock.setAttribute('class', 'card-text');
           price.setAttribute('class', 'card-text');
+          label.setAttribute('for', 'selector' + i + j);
+          label.setAttribute('class', 'mr-2')
+          selector.setAttribute('id', 'selector' + i + j);
           basketButton.setAttribute('class', 'btn btn-primary');
           basketButton.setAttribute('type', 'button');
           basketButton.setAttribute('onclick', 'addToBasket(' + i + ', ' + j + ')');
@@ -52,6 +57,17 @@ function displayProducts() {
             append(cardBody, name);
             append(cardBody, stock);
             append(cardBody, price);
+            append(cardBody, label);
+            append(cardBody, selector);
+            for (var k = 100; k < 600; k += 100) {
+              let value = k;
+              let option = document.createElement('option');
+
+              option.setAttribute('value', value);
+              option.innerHTML = value + 'g';
+
+              append(selector, option);
+            }
             append(cardBody, basketButton);
 
             append(li, span);
@@ -97,20 +113,21 @@ function addToBasket(i, j) {
 
 
   fetch(uri)
-
     .then((response) => response.json())
     .then((json) => json.items)
     .then(function(items) {
 
       //basket = JSON.parse(basket);
 
+      let amount = document.getElementById('selector' + i + j).value;
+
       console.log(basket);
       console.log(items[i][j].name);
 
       basket.products.push({
         "name": items[i][j].name,
-        "amount": "100g",
-        "price": items[i][j].price
+        "amount": amount + 'g',
+        "price": items[i][j].price * amount/1000
       })
 
       basket = JSON.stringify(basket);
