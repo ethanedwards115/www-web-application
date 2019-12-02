@@ -1,4 +1,12 @@
-let basket = JSON.parse(localStorage.getItem('basket'));
+let basket = localStorage.getItem('basket');
+
+if (basket === null) {
+  basket = {
+    "products": []
+  };
+} else {
+  basket = JSON.parse(basket);
+}
 
 console.log(basket);
 
