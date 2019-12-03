@@ -261,6 +261,15 @@ function removeBasketItem(i) {
   displayBasket();
 }
 
+function redrawBasket() {
+
+  let basket = document.getElementsByClassName('basket')[0];
+  basket.style.display = 'none';
+  basket.style.display = 'block';
+}
+
 setFilterTags();
 displayProducts();
 displayBasket();
+
+window.addEventListener('resize', redrawBasket);
