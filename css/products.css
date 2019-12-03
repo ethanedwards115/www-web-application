@@ -24,6 +24,10 @@
   .basket {
     max-height: 100vh;
   }
+
+  #basketTable {
+    display: block;
+  }
 }
 
 .thead-cell {

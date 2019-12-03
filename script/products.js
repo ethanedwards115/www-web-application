@@ -260,6 +260,7 @@ function removeBasketItem(i) {
 }
 
 function redrawBasket() {
+
   let basket = document.getElementsByClassName('basket')[0];
   basket.style.display = 'none';
   basket.style.display = 'block';
