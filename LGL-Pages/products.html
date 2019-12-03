@@ -76,17 +76,19 @@
     <h1 class="row justify-content-center m-4"><span class="shop-name">OUR <span id="dundee">PRODUCTS</span></span></h1>
 
     <div class="row">
-      <div class="basket sticky-top bg-light col-12 col-lg-5 px-0 mr-lg-0">
+      <div class="basket sticky-top bg-light border-bottom border-primary col-12 col-lg-5 px-0 mr-lg-0">
 
         <!-- on click showing and hiding the basket -->
-        <a data-toggle="collapse" href="#basketTable" role="button" aria-expanded="false" aria-controls="basketTable">
+        <a class="d-lg-none sticky-top" data-toggle="collapse" href="#basketTable" role="button" aria-expanded="false" aria-controls="basketTable">
           <h3 class="p-2 mb-0 text-center text-light bg-primary dropdown-toggle">Basket</h3>
         </a>
 
+        <h3 class="d-none d-lg-block sticky-top p-2 mb-0 text-center text-light bg-primary">Basket</h3>
+
         <div class="collapse show" id="basketTable">
           <p class="d-none" id="noItemsText">You have no items in your basket! Try adding some :)</p>
-          <table class="table table-striped">
-            <thead id="basketHead">
+          <table class="table table-striped mb-0">
+            <thead id="basketHead" class="sticky-top">
               <tr class="table-primary">
                 <th scope="col">Item</th>
                 <th scope="col">Amount</th>
