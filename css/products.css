@@ -26,8 +26,8 @@
   }
 }
 
-#basketHead {
-  top: 50px;
+.thead-cell {
+  top: 48px;
 }
 
 #products-container {

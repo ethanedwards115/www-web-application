@@ -79,20 +79,22 @@
       <div class="basket sticky-top bg-light border-bottom border-primary col-12 col-lg-5 px-0 mr-lg-0">
 
         <!-- on click showing and hiding the basket -->
-        <a class="d-lg-none sticky-top" data-toggle="collapse" href="#basketTable" role="button" aria-expanded="false" aria-controls="basketTable">
-          <h3 class="p-2 mb-0 text-center text-light bg-primary dropdown-toggle">Basket</h3>
-        </a>
+        <div class="d-lg-none sticky-top">
+          <a data-toggle="collapse" href="#basketTable" role="button" aria-expanded="false" aria-controls="basketTable">
+            <h3 class="p-2 mb-0 text-center text-light bg-primary dropdown-toggle">Basket</h3>
+          </a>
+        </div>
 
         <h3 class="d-none d-lg-block sticky-top p-2 mb-0 text-center text-light bg-primary">Basket</h3>
 
         <div class="collapse show" id="basketTable">
           <p class="d-none" id="noItemsText">You have no items in your basket! Try adding some :)</p>
           <table class="table table-striped mb-0">
-            <thead id="basketHead" class="sticky-top">
+            <thead id="basketHead">
               <tr class="table-primary">
-                <th scope="col">Item</th>
-                <th scope="col">Amount</th>
-                <th scope="col">Price</th>
+                <th scope="col" class="sticky-top thead-cell">Item</th>
+                <th scope="col" class="sticky-top thead-cell">Amount</th>
+                <th scope="col" class="sticky-top thead-cell">Price</th>
               </tr>
             </thead>
             <tbody class="table-striped" id="basket">
