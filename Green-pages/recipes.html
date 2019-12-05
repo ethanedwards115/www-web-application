@@ -58,16 +58,18 @@
   <main>
     <div class="container my-4">
       <h1 class="shop-name">Recipes</h1>
-      <div id="edamam-badge" data-color="white"></div>
-      <div class="form-group">
-        <form class="" action="#" onsubmit="getRecipes()">
+      <form action="#" onsubmit="getRecipes()">
+        <div class="form-group">
           <label for="recipeTitle">Recipe Search Box - Search for ingredients, dietary or health requirements</label>
           <input type="text" class="form-control" id="recipeTitle">
-          <button id="button" type='button' class="btn btn-primary mb-4" onclick="getRecipes()">Find my Recipe</button>
-        </form>
-      </div>
+          <button id="button" type='button' class="btn btn-primary my-4" onclick="getRecipes()">Find my Recipe</button>
+        </div>
+      </form>
       <div class="row" id="recipes">
 
+      </div>
+      <div class="row">
+        <div class="ml-auto mx-2" id="edamam-badge" data-color="white"></div>
       </div>
     </div>
 
