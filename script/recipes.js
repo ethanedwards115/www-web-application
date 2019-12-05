@@ -4,7 +4,7 @@ const recipeContainer = document.getElementById('recipes');
 
 var input = document.getElementById("recipeTitle");
 input.addEventListener("keyup", function(event) {
-  console.log('added event listener');
+
   if (event.keyCode === 13) {
     event.preventDefault();
   }
@@ -24,11 +24,11 @@ function getRecipes() {
   searchString = document.getElementById("recipeTitle").value;
   url = `https://api.edamam.com/search?app_id=${appId}&app_key=${appKey}&from=0&to=20&q=${searchString}`;
 
-  console.log(url);
+
   fetch(url)
     .then((resp) => resp.json())
     .then(function(data) {
-      console.log(data);
+
       let recipes = data.hits;
       return recipes.map(function(element) {
         div = createNode('div');
@@ -46,6 +46,6 @@ function getRecipes() {
       })
     })
     .catch(function(error) {
-      console.log(error);
+      // do nothing
     });
 };
