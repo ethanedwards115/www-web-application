@@ -16,8 +16,6 @@ function countBasketItems() {
   }
 }
 
-console.log(basket);
-
 let tableBody = document.getElementById('basket-table').getElementsByTagName('tbody')[0];
 // Add the products to the table line by line
 for (product of basket.products) {
