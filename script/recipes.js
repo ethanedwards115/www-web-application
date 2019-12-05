@@ -32,7 +32,7 @@ function getRecipes() {
       let recipes = data.hits;
       return recipes.map(function(element) {
         div = createNode('div');
-        div.setAttribute('class', 'col-sm-3 mb-2')
+        div.setAttribute('class', 'col-12 col-sm-6 col-md-4 col-lg-3 my-3')
 
         recipeImage = element.recipe.image;
         recipeTitle = element.recipe.label;
@@ -40,8 +40,8 @@ function getRecipes() {
         recipeIngredients = element.recipe.ingredientLines.toString();
         recipeURL = element.recipe.url;
 
-        div.innerHTML = "<div class='card border-success mb-3 mx-auto my-3'><img class='card-img-top' src=" + recipeImage + "><div class='card-body'><h5 class='card-title'>" + recipeTitle + "</h5><p class='card-text'>" + recipeSource +
-          "</p><a class=\"btn btn-primary card-text\" href=\"" + recipeURL + "\" target=\"_blank\" >Go to recipe</a></div>";
+        div.innerHTML = "<div class='card border-success h-100'><img class='card-img-top' src=" + recipeImage + "><div class='card-body'><h5 class='card-title'>" + recipeTitle + "</h5><p class='card-text'>" + recipeSource +
+          "</p></div><div class='card-footer bg-transparent border-white'><a class=\"btn btn-primary card-text\" href=\"" + recipeURL + "\" target=\"_blank\" >Go to recipe</a></div></div>";
         append(recipeContainer, div);
       })
     })
