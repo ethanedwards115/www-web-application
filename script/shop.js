@@ -38,3 +38,31 @@ geojson.features.forEach(function(marker) {
       .addTo(map))
     .addTo(map);
 });
+
+function loadBasket() {
+
+  var basket = localStorage.getItem('basket');
+
+  if (basket === null) {
+    basket = {
+      products: []
+    };
+  } else {
+    basket = JSON.parse(basket);
+  }
+
+  return basket;
+}
+
+function countBasketItems() {
+  var basket = loadBasket();
+
+  var basketCounters = document.getElementsByClassName('basket-counter');
+
+  for (var i = 0; i < basketCounters.length; i++) {
+    
+    basketCounters[i].innerHTML = `${basket.products.length}`
+  }
+}
+
+window.onload = countBasketItems();
