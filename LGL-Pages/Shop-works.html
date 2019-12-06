@@ -41,29 +41,38 @@
 </head>
 
 <body class="min-vh-100">
-<nav class="navbar navbar-expand-lg navbar-dark bg-primary">
-  <a class="navbar-brand" href="shop.html">The Little Green Larder</a>
-  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarColor01" aria-controls="navbarColor01" aria-expanded="false" aria-label="Toggle navigation">
-    <span class="navbar-toggler-icon"></span>
-  </button>
-<!--The nav bar -->
-  <div class="collapse navbar-collapse" id="navbarColor01">
-    <ul class="navbar-nav mr-auto">
-      <li class="nav-item">
-        <a class="nav-link" href="../pages/home.html">Home</a>
-      </li>
-      <li>
-        <a class="nav-link" href="shop.html">Shop</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="products.html">Products</a>
-      </li>
-      <li class="nav-item active">
-        <a class="nav-link" href="Shop-works.html">How the shop works<span class="sr-only">(current)</span></a>
-      </li>
-    </ul>
-  </div>
-</nav>
+  <!-- The navbar -->
+  <nav class="navbar navbar-expand-md navbar-dark bg-primary">
+    <a class="navbar-brand" href="shop.html">The Little Green Larder</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarColor01" aria-controls="navbarColor01" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarColor01">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item">
+          <a class="nav-link" href="../pages/home.html">Home</a>
+        </li>
+        <li>
+          <a class="nav-link active" href="shop.html">Shop<span class="sr-only">(current)</span></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="products.html">Products</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="Shop-works.html">How the shop works</a>
+        </li>
+        <li class="nav-item d-md-none">
+          <a class="nav-link" href="basket.html">Basket<span class="basket-counter badge badge-light">0</span></a>
+        </li>
+      </ul>
+      <ul class="navbar-nav ml-auto mr-3">
+        <li class="nav-item">
+          <a class="basket-link nav-link d-none d-md-block" href="basket.html"><i class="fas fa-shopping-basket fa-2x"></i><span class="basket-counter basket-items-count badge badge-light">0</span></a>
+        </li>
+      </ul>
+    </div>
+  </nav>
 
 
 <!--Main part of the page, showing images and a step by step guide on how to buy pruducts from the store -->
@@ -96,7 +105,6 @@
             <li class="slide">Pay it</li>
           </ul>
         </div>
-        <script src="../script/slideshow.js"></script>
 
       </main>
 
@@ -109,6 +117,8 @@
           </div>
         </div>
       </footer>
+
+      <script src="../script/shop-works.js"></script>
 
       <!-- Bootstrap javascripts -->
       <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
