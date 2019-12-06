@@ -1,6 +1,8 @@
 /*The font for the title of the pages */
 @import url('https://fonts.googleapis.com/css?family=Alata&display=swap');
 
+/* GLOBAL SELECTORS */
+
 body {
   /* Display the navbar-main-footer in a column and stick the navbar and footer to the top/bottom */
   display: flex;
@@ -13,21 +15,46 @@ body {
   flex-shrink: 0;
 }
 
-.basket-link {
-  position: relative;
-}
-
-.basket-items-count {
-  position: absolute;
-  top: 27px;
-  left: 30px;
-}
-
 main {
-  /* Make main as big as possible */
+  /* Make main as big as possible (push the footer down) */
   flex: 1 0 auto;
 }
 
+h1 {
+  font-size: 30px;
+  font-family: 'Alata', sans-serif;
+}
+
+.footer {
+  /* Shrink the footer to the content's size */
+  flex-shrink: 0;
+  /* Make it as width as the screen (body) */
+  width: 100%;
+  background-color: #56CC9D;
+  color: white;
+  text-align: center;
+}
+
+/* Icons in the footer */
+.fab {
+  color: #FFFFFF;
+}
+
+.fa-facebook-square {
+  color: #3B5998;
+}
+
+.fab:hover {
+  color: #CCCCCC;
+}
+
+.fa-facebook-square:hover {
+  color: #8B9DC3;
+}
+
+/* HOME PAGE SELECTORS */
+
+/* The title on the home page */
 #homeHeading {
   font-family: 'Alata', sans-serif;
   color: black;
@@ -42,33 +69,31 @@ main {
   -webkit-text-stroke-color: black;
 }
 
+/* Part of the title on the home page */
 #dundee {
   -webkit-text-stroke-color: #3A9B67;
   font-size: 50px;
 }
 
+/* The background of the home page */
 #homeBackground {
   background: rgb(2, 0, 36);
   background: linear-gradient(360deg, rgba(2, 0, 36, 1) 0%, rgba(9, 9, 121, 1) 0%, rgba(86, 204, 157, 1) 0%, rgba(0, 212, 255, 1) 100%);
 }
 
+/* Elements on the cards on the home page */
+#card-title {
+  color: black;
+}
+
+#green-button {
+  margin-top: 23px;
+}
+
+/* SHOP PAGES */
+
 #shoptext {
   font-size: 18px;
-}
-
-.footer {
-  /* Shrink the footer to the content's size */
-  flex-shrink: 0;
-  /* Make it as width as the screen (body) */
-  width: 100%;
-  background-color: #56CC9D;
-  color: white;
-  text-align: center;
-}
-
-h1 {
-  font-size: 30px;
-  font-family: 'Alata', sans-serif;
 }
 
 .shop-name {
@@ -87,16 +112,60 @@ h1 {
   -webkit-text-stroke-color: #3A9B67;
 }
 
+/* Display the count badge relative to the basket icon */
+.basket-link {
+  position: relative;
+}
+
+.basket-items-count {
+  position: absolute;
+  top: 27px;
+  left: 30px;
+}
+
+/* The map's size on the shop page */
+#map {
+  height: 400px;
+  width: 100%
+}
+
+/* The marker of the shop on the map */
+.marker {
+  background-image: url('../img/marker.png');
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 50px;
+  height: 50px;
+  cursor: pointer;
+}
+
+/* The pop-up block when you click on a marker on the map */
+.mapboxgl-popup {
+  max-width: 600px;
+}
+
+/* The pop-up window's text attributes */
+.mapboxgl-popup-content {
+  text-align: center;
+  font-family: 'Open Sans', sans-serif;
+}
+
+/* GREEN LIVING PAGES */
+
+/* Container of the cards on the Green Living home page */
 #green-container {
   margin-top: 100px;
 }
 
+/* The image on the cards above */
 .greenimg {
   display: inline-block;
   width: 100%;
   height: auto;
 }
 
+/* The overlaying texts on the images (the next 3 selector) */
 #plastic.overlay {
   position: absolute;
   top: 0;
@@ -136,6 +205,7 @@ h1 {
   background-color: rgb(86, 204, 157);
 }
 
+/* Reveal the overlays on the pictures on hover */
 #plasticHover:hover .overlay {
   opacity: 1;
 }
@@ -154,12 +224,14 @@ h1 {
   position: absolute;
   top: 50%;
   left: 50%;
-  -webkit-transform: translate(-50%, -50%);
-  -ms-transform: translate(-50%, -50%);
-  transform: translate(-50%, -50%);
+  /* Move the overlaying texts to the center */
+  -webkit-transform: translate(-50%, -50%); /*safari*/
+  -ms-transform: translate(-50%, -50%); /*IE 9*/
+  transform: translate(-50%, -50%); /*standard syntax*/
   text-align: center;
 }
 
+/* Text size on the overlays */
 #globalText {
   font-size: 13px;
 }
@@ -172,7 +244,14 @@ h1 {
   font-size: 20px;
 }
 
-/* media tags to change font size on different screen sizes */
+/* BASKET */
+
+.divider {
+  height: 10px;
+}
+
+/* MEDIA QUERIES FOR DIFFERENT TEXT SIZES ON DIFFERENT SCREEN SIZES */
+
 @media (min-width: 576px) {
   h1 {
     font-size: 40px;
@@ -247,60 +326,4 @@ h1 {
   #dundee {
     font-size: 90px;
   }
-}
-
-#map {
-  height: 400px;
-  width: 100%
-}
-
-/* The marker of the shop on the map */
-.marker {
-  background-image: url('../img/marker.png');
-  background-size: contain;
-  background-position: center;
-  background-repeat: no-repeat;
-  width: 50px;
-  height: 50px;
-  cursor: pointer;
-}
-
-/* The pop-up block when you click on a marker on the map */
-.mapboxgl-popup {
-  max-width: 600px;
-}
-
-/* The pop-up window's text attributes */
-.mapboxgl-popup-content {
-  text-align: center;
-  font-family: 'Open Sans', sans-serif;
-}
-
-#card-title {
-  color: black;
-}
-
-#green-button {
-  margin-top: 23px;
-}
-
-.divider {
-  height: 10px;
-}
-
-/* Icons in the footer */
-.fab {
-  color: #FFFFFF;
-}
-
-.fa-facebook-square {
-  color: #3B5998;
-}
-
-.fab:hover {
-  color: #CCCCCC;
-}
-
-.fa-facebook-square:hover {
-  color: #8B9DC3;
 }
