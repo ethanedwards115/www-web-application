@@ -1,17 +1,14 @@
-.card {
-  width: 15rem;
-  height: auto;
-}
-
+/* Displays the items in the basket */
 .basket {
-  align-self: flex-start;
-  overflow-y: scroll;
+  align-self: flex-start; /* display it at the bottom */
+  overflow-y: scroll; /* Make it scrollable */
   max-height: 30vh;
 
+  /* Show thin scrollbar on firefox */
   scrollbar-width: thin;
 
   /* Hide scrollbar for IE and Edge */
-   -ms-overflow-style: none;
+  -ms-overflow-style: none;
 }
 
 /* Hide scrollbar for Chrome, Safari and Opera */
@@ -20,6 +17,7 @@
 }
 
 /* Large devices (desktops, 992px and up) */
+/* Different height on large devices (content side-by-side instead of below each other) */
 @media (min-width: 992px) {
   .basket {
     max-height: 100vh;
@@ -30,17 +28,26 @@
   }
 }
 
+/* place the header of the basket exactly below the title of it, even during scrolls */
 .thead-cell {
   top: 48px;
 }
 
+/* Display product cards */
 #products-container {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
 }
 
-li {
+/* Contains information about a product */
+.card {
+  width: 15rem;
+  height: auto;
+}
+
+/* Display list elements without indentations and bullet points */
+#products-container li {
   list-style-type: none;
   list-style-position: inside;
 }
