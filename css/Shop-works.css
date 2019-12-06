@@ -1,12 +1,10 @@
 #slides{
     height: 300px;
-    width: 300px
+    width: 400px;
     list-style-type: none;
 }
 /*Controls the look and position of class slide, as well as the transition */
 #slides li{
-    left: 0;
-    top: 0;
     width: 100%;
     height: 100%;
 

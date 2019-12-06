@@ -5,9 +5,9 @@ var slideInterval = setInterval(nextSlide,2000);
 
 //transistions between slides
 function nextSlide() {
-    slides[showingSlide].className = 'slide d-none';
+    slides[showingSlide].className = 'slide p-3 d-none';
     showingSlide = (showingSlide+1)%slides.length;
-    slides[showingSlide].className = 'slide d-block';
+    slides[showingSlide].className = 'slide p-3 d-block';
 }
 
 function loadBasket() {
