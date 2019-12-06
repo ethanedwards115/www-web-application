@@ -36,6 +36,7 @@ main {
   padding-bottom: 20px;
   font-size: 40px;
   letter-spacing: 2px;
+  /* Make the font hollow */
   -webkit-text-fill-color: rgb(0, 212, 255);
   -webkit-text-stroke-width: 2.5px;
   -webkit-text-stroke-color: black;
@@ -51,7 +52,7 @@ main {
   background: linear-gradient(360deg, rgba(2, 0, 36, 1) 0%, rgba(9, 9, 121, 1) 0%, rgba(86, 204, 157, 1) 0%, rgba(0, 212, 255, 1) 100%);
 }
 
-#shoptext{
+#shoptext {
   font-size: 18px;
 }
 
@@ -171,7 +172,7 @@ h1 {
   font-size: 20px;
 }
 
-/* Make the texts bigger on larger screens */
+/* media tags to change font size on different screen sizes */
 @media (min-width: 576px) {
   h1 {
     font-size: 40px;
