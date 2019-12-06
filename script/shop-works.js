@@ -5,11 +5,11 @@ var slideInterval = setInterval(nextSlide,2000);
 
 //transistions between slides
 function nextSlide() {
-    slides[showingSlide].className = 'slide p-3 d-none';
+    slides[showingSlide].className = 'slide';
     showingSlide = (showingSlide+1)%slides.length;
-    slides[showingSlide].className = 'slide p-3 d-block';
+    slides[showingSlide].className = 'slide showing';
 }
-//Loads the basket from local storage
+
 function loadBasket() {
 
   var basket = localStorage.getItem('basket');
@@ -24,7 +24,7 @@ function loadBasket() {
 
   return basket;
 }
-//Counts the number of items in the basket
+
 function countBasketItems() {
   var basket = loadBasket();
 
