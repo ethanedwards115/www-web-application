@@ -1,5 +1,7 @@
+// API used to fetch the products
 const uri = 'https://api.myjson.com/bins/eu9qu';
 
+// helper functions
 function createNode(element) {
   return document.createElement(element);
 }
@@ -8,10 +10,12 @@ function append(parent, element) {
   parent.appendChild(element);
 }
 
+// display the products on cards in a container
 function displayProducts(products = getProducts()) {
 
   var container = document.getElementById("products-container");
 
+  // Delete all the childs first
   clearChildren(container);
 
   products.then(function(items) {
@@ -119,6 +123,7 @@ function getFilteredProducts(filterValue, byCategory = true) {
   }
 }
 
+// Load the basket from the local storage
 function loadBasket() {
 
   var basket = localStorage.getItem('basket');
@@ -134,6 +139,7 @@ function loadBasket() {
   return basket;
 }
 
+//  count the number of items in the basket and display the number on the basket nav item
 function countBasketItems() {
   var basket = loadBasket();
 
@@ -144,13 +150,12 @@ function countBasketItems() {
   }
 }
 
+// Add a new product to the basket
 function addToBasket(i, j) {
 
   var basket = loadBasket();
 
   getProducts().then(function(items) {
-
-    //basket = JSON.parse(basket);
 
     let amount = document.getElementById('selector' + i + j).value;
 
