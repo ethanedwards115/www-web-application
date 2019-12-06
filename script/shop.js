@@ -1,6 +1,7 @@
-
+// Identification for the API
 mapboxgl.accessToken = 'pk.eyJ1IjoiYXJjZmVqIiwiYSI6ImNrMnhoazQyeDBicmYzYnBkbHF0cXp2anYifQ.esr-RTeyjx4JbwgctD1ykA';
 
+// Create the map object
 var map = new mapboxgl.Map({
 container: 'map',
 style: 'mapbox://styles/mapbox/streets-v11',
@@ -8,6 +9,7 @@ center: [-2.992313, 56.455915],
 zoom: 14,
 });
 
+// Create new geolocation data for the shop(s)
 var geojson = {
 type: 'FeatureCollection',
 features: [
@@ -39,31 +41,34 @@ new mapboxgl.Marker(el)
     .addTo(map))
   .addTo(map);
 });
+
 //Loads the basket from local storage
 function loadBasket() {
 
-var basket = localStorage.getItem('basket');
+  var basket = localStorage.getItem('basket');
 
-if (basket === null) {
-  basket = {
-    products: []
-  };
-} else {
-  basket = JSON.parse(basket);
+  if (basket === null) {
+    basket = {
+      products: []
+    };
+  } else {
+    basket = JSON.parse(basket);
+  }
+
+  return basket;
 }
 
-return basket;
-}
 //Will count the number of items in a basket
 function countBasketItems() {
-var basket = loadBasket();
+  var basket = loadBasket();
 
-var basketCounters = document.getElementsByClassName('basket-counter');
+  var basketCounters = document.getElementsByClassName('basket-counter');
 
-for (var i = 0; i < basketCounters.length; i++) {
+  for (var i = 0; i < basketCounters.length; i++) {
 
-  basketCounters[i].innerHTML = `${basket.products.length}`
+    basketCounters[i].innerHTML = `${basket.products.length}`
+  }
 }
-}
 
+// display the count of items in the basket over the basket icon on load
 window.onload = countBasketItems();
