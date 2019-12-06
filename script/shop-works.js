@@ -9,7 +9,7 @@ function nextSlide() {
     showingSlide = (showingSlide+1)%slides.length;
     slides[showingSlide].className = 'slide p-3 d-block';
 }
-
+//Loads the basket from local storage
 function loadBasket() {
 
   var basket = localStorage.getItem('basket');
@@ -24,7 +24,7 @@ function loadBasket() {
 
   return basket;
 }
-
+//Counts the number of items in the basket
 function countBasketItems() {
   var basket = loadBasket();
 
