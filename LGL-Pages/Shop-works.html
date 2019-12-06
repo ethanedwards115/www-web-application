@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+
+  <!-- Bootstrap -->
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <link rel="stylesheet" href="../css/bootstrap.css">
+
+<!-- The master css -->
+<link rel="stylesheet" href="../css/master.css">
+
+<link rel="stylesheet" href="../css/Shop-works.css">
+
+<!-- Icons on the tabs for different devices -->
+<link rel="apple-touch-icon" sizes="57x57" href="../pictures/apple-icon-57x57.png">
+<link rel="apple-touch-icon" sizes="60x60" href="../pictures/apple-icon-60x60.png">
+<link rel="apple-touch-icon" sizes="72x72" href="../pictures/apple-icon-72x72.png">
+<link rel="apple-touch-icon" sizes="76x76" href="../pictures/apple-icon-76x76.png">
+<link rel="apple-touch-icon" sizes="114x114" href="../pictures/apple-icon-114x114.png">
+<link rel="apple-touch-icon" sizes="120x120" href="../pictures/apple-icon-120x120.png">
+<link rel="apple-touch-icon" sizes="144x144" href="../pictures/apple-icon-144x144.png">
+<link rel="apple-touch-icon" sizes="152x152" href="../pictures/apple-icon-152x152.png">
+<link rel="apple-touch-icon" sizes="180x180" href="../pictures/apple-icon-180x180.png">
+<link rel="icon" type="image/png" sizes="192x192" href="../pictures/android-icon-192x192.png">
+<link rel="icon" type="image/png" sizes="32x32" href="../pictures/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="96x96" href="../pictures/favicon-96x96.png">
+<link rel="icon" type="image/png" sizes="16x16" href="../pictures/favicon-16x16.png">
+
+<!-- For enabling home-screen application on mobile -->
+<link rel="manifest" href="/manifest.json">
+<meta name="msapplication-TileColor" content="#ffffff">
+<meta name="msapplication-TileImage" content="../pictures/ms-icon-144x144.png">
+<meta name="theme-color" content="#ffffff">
+
+<!-- For icons -->
+<script src="https://kit.fontawesome.com/6854d7f83d.js" crossorigin="anonymous"></script>
+
+<title>The Little Green Larder</title>
+</head>
+
+<body class="min-vh-100">
+<nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+  <a class="navbar-brand" href="#">The Little Green Larder</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarColor01" aria-controls="navbarColor01" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+<!--The nav bar -->
+  <div class="collapse navbar-collapse" id="navbarColor01">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item active">
+        <a class="nav-link" href="../pages/home.html">Home <span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="products.html">Products</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="Delivery.html">Delivery</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="Shop-works.html">How the shop works</a>
+      </li>
+    </ul>
+    <form class="form-inline my-2 my-lg-0">
+      <input class="form-control mr-sm-2" type="text" placeholder="Search">
+      <button class="btn btn-secondary my-2 my-sm-0" type="submit">Search</button>
+    </form>
+  </div>
+</nav>
+
+<!--Main part of the page, showing images and a step by step guide on how to buy pruducts from the store -->
+  <main class="container my-4">
+    <h1 class="row my-4 mx-2 row-with-span"><span class="shop-name">How is our store <span class="green">Different?</span></h1>
+    <div class="row mx-2">
+      <img class="col-lg-6 p-0 pr-lg-2" src="../img/shop-front.jpg" alt="Picture of the store's front">
+      <p class="col-lg-6 text-justify px-0 pt-2 pl-lg-2 py-lg-0">Here at the little Green Larder we work a little differently from shops you might be used to. In an effort to reduce our waste as much as we possibly can, we operate generally on a bagless system, where customers are able to bring
+        in their own containers and use those to directly store and buy our products with. This is a short guide to help you get used to the concept, and make sure that your next visit is as smooth as possible. <br> <br> Put as simply as possible, you bring your own little bags or containers, you
+      put what you'd like into them from our delicious prodects, then you weigh it and pay for it, simple right?</p>
+    </div>
+
+    <div class="row mx-2 my-4">
+    <img class="col-lg-4 p-0 pr-lg-2" src="../img/beans.png" alt="containers full of beans">
+    <p class="col-lg-6 text-justify px-0 pt-2 pl-lg-2 py-lg-0">A simple way to visualise our system if you've never used it before is to think of it as a healthier form of the classic pick and mix. The first step is probably the hardest, picking what you want! <br> pick from any of our great products,
+     but be sure to keep it to one product per container, as they are slightly different prices </p>
+  </div>
+
+    <div class="row mx-2">
+    <img class="col-lg-4 p-0 pr-lg-2" src="../img/weigh.png" alt="Picture of the store's scale">
+    <p class="col-lg-6 text-justify px-0 pt-2 pl-lg-2 py-lg-0">Now that you have your bag/container full of whatever you want, you have to weigh it, as this is how the total cost is calculated. <br> Simply go over to our scale, located right next to the treats in the corner and plop your produce right down.
+    The weight and price will be displayed for you, along with a little recipt. <br> Finally just take your recipt over to our friendly cashier and pay up, and then that's it, you're free to enjoy your new snacks or spices. </p>
+  </div>
+
+<!--The class for the slides, showing is the current slide-->
+<div class="col-lg-6 p-0 pr-lg-2">
+  <ul id="slides">
+  <li class="slide showing">Select what you'd like</li>
+  <li class="slide">Weigh it</li>
+  <li class="slide">Pay it</li>
+  </ul>
+</div>
+  <script src="../script/slideshow.js"></script>
+
+</main>
+
+<!--links to the facebook and instagram pages for the store -->
+<footer>
+  <div class="footer p-1">
+    <div class="icons">
+      <a href="https://www.facebook.com/thelittlegreenlarder/" target="_blank"><em class="fab fa-facebook-square fa-2x"></em></a>
+      <a href="https://www.instagram.com/thelittlegreenlarder/" target="_blank"><em class="fab fa-instagram fa-2x"></em></a>
+   </div>
+  </div>
+</footer>
+
+<!-- Bootstrap javascripts -->
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+</body>
+
+
+</html>
