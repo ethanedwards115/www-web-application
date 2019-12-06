@@ -1,5 +1,7 @@
+// Load the basket from the local storage
 let basket = localStorage.getItem('basket');
 
+// Create an empty basket if there wasn't any on the disk
 if (basket === null) {
   basket = {
     "products": []
@@ -8,6 +10,7 @@ if (basket === null) {
   basket = JSON.parse(basket);
 }
 
+// Count the number of items in the basket
 function countBasketItems() {
   var basketCounters = document.getElementsByClassName('basket-counter');
 
@@ -35,6 +38,7 @@ for (product of basket.products) {
   tableBody.appendChild(row);
 }
 
+// Get the information from the form and save the order into a txt file
 function sendOrder() {
   let name = document.getElementById('inputName').value;
   let house = document.getElementById('inputHouse').value;
@@ -82,4 +86,5 @@ function sendOrder() {
   form.reset();
 }
 
+// Count the items in the basket on loading the page
 window.onload = countBasketItems();
