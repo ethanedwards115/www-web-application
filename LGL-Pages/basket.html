@@ -40,6 +40,7 @@
 </head>
 
 <body class="min-vh-100">
+  <!-- Navbar -->
   <nav class="navbar navbar-expand-xl navbar-dark bg-primary">
     <a class="navbar-brand" href="shop.html">The Little Green Larder</a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarColor01" aria-controls="navbarColor01" aria-expanded="false" aria-label="Toggle navigation">
@@ -77,8 +78,11 @@
   </nav>
 
   <main id="main" class="container my-4">
+
     <h1 class="form-row shop-name my-4">Basket</h1>
+
     <h3 class="form-row">Products</h3>
+    <!-- The table of products in the basket -->
     <div class="form-row">
       <table id="basket-table" class="table table-striped">
         <thead class="thead-dark">
@@ -88,6 +92,7 @@
             <th scope="col">Price</th>
           </tr>
         </thead>
+        <!-- Contains the information of the products in the basket -->
         <tbody>
 
         </tbody>
@@ -97,7 +102,9 @@
     <!-- Form for ordering -->
     <form id="order" method="get" class="needs-validation my-4" novalidate>
       <!-- name, address (street, number flat etc, city, zip), contact (number, email) -->
+
       <h3 class="form-row my-0">Delivery details</h3>
+      <!-- Name and address -->
       <div class="divider form-row bg-primary mb-2"></div>
       <div class="form-group">
         <label for="inputName">Name</label>
@@ -141,6 +148,7 @@
       </div>
 
       <h3 class="form-row my-0">Contact details</h3>
+      <!-- Phone and email -->
       <div class="divider form-row bg-primary mb-2"></div>
       <div class="form-group">
         <label for="inputEmail">Email</label>
