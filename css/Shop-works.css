@@ -47,12 +47,12 @@
   background-repeat: no-repeat;
 }
 .slide:nth-of-type(2){
-    background-image: url('../img/weight.png');
+    background-image: url('../img/weight.PNG');
 
     background-repeat: no-repeat;
 }
 .slide:nth-of-type(3){
-    background-image: url('../img/register.png');
+    background-image: url('../img/register.PNG');
 
     background-repeat: no-repeat;
 }
