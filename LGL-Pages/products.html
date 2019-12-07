@@ -3,15 +3,12 @@
 
 <head>
   <meta charset="utf-8">
-
-  <!-- Bootstrap -->
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <link rel="stylesheet" href="../css/bootstrap.css">
-
-  <!-- The master css -->
+  <link rel="stylesheet" href="../css/unsemantic-grid-responsive-tablet-rtl.css">
   <link rel="stylesheet" href="../css/master.css">
+  <link rel="stylesheet" href="../css/products.css">
 
-  <!-- Icons on the tabs for different devices -->
+  <!--ICONS-->
   <link rel="apple-touch-icon" sizes="57x57" href="../pictures/apple-icon-57x57.png">
   <link rel="apple-touch-icon" sizes="60x60" href="../pictures/apple-icon-60x60.png">
   <link rel="apple-touch-icon" sizes="72x72" href="../pictures/apple-icon-72x72.png">
@@ -32,42 +29,89 @@
   <meta name="msapplication-TileImage" content="../pictures/ms-icon-144x144.png">
   <meta name="theme-color" content="#ffffff">
 
-  <!-- For icons -->
-  <script src="https://kit.fontawesome.com/6854d7f83d.js" crossorigin="anonymous"></script>
-
-  <title>The Little Green Larder</title>
+  <title>The Little Green Larder - Products</title>
 </head>
 
 <body class="min-vh-100">
-  <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
-    <a class="navbar-brand" href="#">The Little Green Larder</a>
+  <!-- navbar -->
+  <nav class="navbar navbar-expand-md navbar-dark bg-primary">
+    <a class="navbar-brand" href="shop.html">The Little Green Larder</a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarColor01" aria-controls="navbarColor01" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
 
     <div class="collapse navbar-collapse" id="navbarColor01">
       <ul class="navbar-nav mr-auto">
+        <li class="nav-item">
+          <a class="nav-link" href="../pages/home.html">Home</a>
+        </li>
+        <li>
+          <a class="nav-link" href="shop.html">Shop</a>
+        </li>
         <li class="nav-item active">
-          <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+          <a class="nav-link" href="products.html">Products<span class="sr-only">(current)</span></a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">Item 1</a>
+          <a class="nav-link" href="Shop-works.html">How the shop works</a>
         </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">Item 2</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">Item 3</a>
+        <li class="nav-item d-md-none">
+          <a class="nav-link" href="basket.html">Basket <span class="basket-counter badge badge-light">3</span></a>
         </li>
       </ul>
-      <form class="form-inline my-2 my-lg-0">
-        <input class="form-control mr-sm-2" type="text" placeholder="Search">
-        <button class="btn btn-secondary my-2 my-sm-0" type="submit">Search</button>
-      </form>
+      <ul class="navbar-nav ml-auto mr-3">
+        <li class="nav-item">
+          <a class="basket-link nav-link d-none d-md-block" href="basket.html"><i class="fas fa-shopping-basket fa-2x"></i><span class="basket-counter basket-items-count badge badge-light">0</span></a>
+        </li>
+      </ul>
     </div>
   </nav>
 
-  <main class="container">
+
+  <main class="container-fluid py-4 px-4">
+
+    <h1 class="row justify-content-center m-4"><span class="shop-name">OUR <span id="dundee">PRODUCTS</span></span></h1>
+
+    <div class="row">
+      <div class="basket sticky-top bg-light border-bottom border-primary col-12 col-lg-5 px-0 mr-lg-0">
+
+        <!-- on click showing and hiding the basket -->
+        <div class="d-lg-none sticky-top">
+          <a data-toggle="collapse" href="#basketTable" role="button" aria-expanded="false" aria-controls="basketTable">
+            <h3 class="p-2 mb-0 text-center text-light bg-primary dropdown-toggle">Basket</h3>
+          </a>
+        </div>
+
+        <h3 class="d-none d-lg-block sticky-top p-2 mb-0 text-center text-light bg-primary">Basket</h3>
+
+        <div class="collapse show" id="basketTable">
+          <p class="d-none" id="noItemsText">You have no items in your basket! Try adding some :)</p>
+          <table class="table table-striped mb-0">
+            <thead id="basketHead">
+              <tr class="table-primary">
+                <th scope="col" class="sticky-top thead-cell">Item</th>
+                <th scope="col" class="sticky-top thead-cell">Amount</th>
+                <th scope="col" class="sticky-top thead-cell">Price</th>
+              </tr>
+            </thead>
+            <tbody class="table-striped" id="basket">
+
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <div class="col-12 col-lg-7 mt-3 mt-lg-0">
+        <!-- Filter for the products -->
+        <label for="filterSelector">Select filter:</label>
+        <select class="form-control" id="filterSelector">
+          <option value="default">None</option>
+        </select>
+        <!-- used for displaying product items in JS-->
+        <ul class="" id="products-container"></ul>
+      </div>
+    </div>
+
+
 
   </main>
 
@@ -76,9 +120,14 @@
       <div class="icons">
         <a href="https://www.facebook.com/thelittlegreenlarder/" target="_blank"><em class="fab fa-facebook-square fa-2x"></em></a>
         <a href="https://www.instagram.com/thelittlegreenlarder/" target="_blank"><em class="fab fa-instagram fa-2x"></em></a>
-     </div>
+      </div>
     </div>
   </footer>
+
+  <script src="../script/products.js"></script>
+
+<!-- Font awesome -->
+  <script src="https://kit.fontawesome.com/6854d7f83d.js" crossorigin="anonymous"></script>
 
   <!-- Bootstrap javascripts -->
   <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>

@@ -10,6 +10,7 @@
 
   <!-- The master css -->
   <link rel="stylesheet" href="../css/master.css">
+  <link rel="stylesheet" href="../css/home.css">
 
   <!-- Icons on the tabs for different devices -->
   <link rel="apple-touch-icon" sizes="57x57" href="../pictures/apple-icon-57x57.png">
@@ -32,42 +33,42 @@
   <meta name="msapplication-TileImage" content="../pictures/ms-icon-144x144.png">
   <meta name="theme-color" content="#ffffff">
 
-  <!-- For icons -->
-  <script src="https://kit.fontawesome.com/6854d7f83d.js" crossorigin="anonymous"></script>
 
-  <title>The Little Green Larder</title>
+  <title>Live Well Dundee</title>
 </head>
 
+
 <body class="min-vh-100">
-  <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
-    <a class="navbar-brand" href="#">The Little Green Larder</a>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarColor01" aria-controls="navbarColor01" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
+  <main class="container-fluid pb-4" id=homeBackground>
+    <div class="container h-100">
 
-    <div class="collapse navbar-collapse" id="navbarColor01">
-      <ul class="navbar-nav mr-auto">
-        <li class="nav-item active">
-          <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">Item 1</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">Item 2</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">Item 3</a>
-        </li>
-      </ul>
-      <form class="form-inline my-2 my-lg-0">
-        <input class="form-control mr-sm-2" type="text" placeholder="Search">
-        <button class="btn btn-secondary my-2 my-sm-0" type="submit">Search</button>
-      </form>
+      <!-- title -->
+      <div class="row">
+        <h1 id="homeHeading" class="col-12">LIVE WELL IN <span id="dundee">DUNDEE</span></h1>
+      </div>
+
+      <!-- Two cards acting as navigation elements on the page -->
+      <div class="row align-items-center">
+
+        <div class="card col-12 col-lg-6 mx-auto my-3">
+          <img class="card-img-top" src="../pictures/little_green_larder.jpg" alt="Little green larder image">
+          <div class="card-body">
+            <h4 class="card-title" id="card-title">The Little Green Larder</h4>
+            <p class="card-text" id="card-text">The Little Green Larder offers a plastic free shopping experience, with zero waste alternatives to inspire us to create a greener future.</p>
+            <a href="../LGL-Pages/shop.html" class="btn btn-outline-dark stretched-link">Click to visit page</a>
+          </div>
+        </div>
+
+        <div class="card col-12 col-lg-6 mx-auto my-3" id="greenCard">
+          <img class="card-img-top" src="../pictures/green_living.jpg" alt="Little green larder image">
+          <div class="card-body">
+            <h4 class="card-title" id="card-title">Green Living</h4>
+            <p class="card-text" id="card-text">Learn about the impact we are having on our enviroment as well as recipe tips and tricks to help you live better.</p>
+            <a href="../Green-pages/greenhome.html" class="btn btn-outline-dark stretched-link" id="green-button">Click to visit page</a>
+          </div>
+        </div>
+      </div>
     </div>
-  </nav>
-
-  <main class="container">
 
   </main>
 
@@ -76,14 +77,13 @@
       <div class="icons">
         <a href="https://www.facebook.com/thelittlegreenlarder/" target="_blank"><em class="fab fa-facebook-square fa-2x"></em></a>
         <a href="https://www.instagram.com/thelittlegreenlarder/" target="_blank"><em class="fab fa-instagram fa-2x"></em></a>
-     </div>
+      </div>
     </div>
   </footer>
 
-  <!-- Bootstrap javascripts -->
-  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
 </body>
+
+<!-- For icons -->
+<script src="https://kit.fontawesome.com/6854d7f83d.js" crossorigin="anonymous"></script>
 
 </html>

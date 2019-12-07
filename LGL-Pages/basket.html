@@ -1,0 +1,189 @@
+﻿
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+
+  <!-- Bootstrap -->
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <link rel="stylesheet" href="../css/bootstrap.css">
+
+  <!-- The master css -->
+  <link rel="stylesheet" href="../css/master.css">
+
+  <!-- Icons on the tabs for different devices -->
+  <link rel="apple-touch-icon" sizes="57x57" href="../pictures/apple-icon-57x57.png">
+  <link rel="apple-touch-icon" sizes="60x60" href="../pictures/apple-icon-60x60.png">
+  <link rel="apple-touch-icon" sizes="72x72" href="../pictures/apple-icon-72x72.png">
+  <link rel="apple-touch-icon" sizes="76x76" href="../pictures/apple-icon-76x76.png">
+  <link rel="apple-touch-icon" sizes="114x114" href="../pictures/apple-icon-114x114.png">
+  <link rel="apple-touch-icon" sizes="120x120" href="../pictures/apple-icon-120x120.png">
+  <link rel="apple-touch-icon" sizes="144x144" href="../pictures/apple-icon-144x144.png">
+  <link rel="apple-touch-icon" sizes="152x152" href="../pictures/apple-icon-152x152.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="../pictures/apple-icon-180x180.png">
+  <link rel="icon" type="image/png" sizes="192x192" href="../pictures/android-icon-192x192.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="../pictures/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="96x96" href="../pictures/favicon-96x96.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="../pictures/favicon-16x16.png">
+
+  <!-- For enabling home-screen application on mobile -->
+  <link rel="manifest" href="/manifest.json">
+  <meta name="msapplication-TileColor" content="#ffffff">
+  <meta name="msapplication-TileImage" content="../pictures/ms-icon-144x144.png">
+  <meta name="theme-color" content="#ffffff">
+
+  <!-- For icons -->
+  <script src="https://kit.fontawesome.com/6854d7f83d.js" crossorigin="anonymous"></script>
+
+  <title>The Little Green Larder - Basket</title>
+</head>
+
+<body class="min-vh-100">
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-md navbar-dark bg-primary">
+    <a class="navbar-brand" href="shop.html">The Little Green Larder</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarColor01" aria-controls="navbarColor01" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarColor01">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item">
+          <a class="nav-link" href="../pages/home.html">Home</a>
+        </li>
+        <li>
+          <a class="nav-link" href="shop.html">Shop</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="products.html">Products</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="Shop-works.html">How the shop works</a>
+        </li>
+        <li class="nav-item active d-md-none">
+          <a class="nav-link" href="basket.html">Basket <span class="basket-counter badge badge-light sr-only">3</span></a>
+        </li>
+      </ul>
+      <ul class="navbar-nav ml-auto mr-3">
+        <li class="nav-item">
+          <a class="basket-link nav-link d-none d-md-block" href="../LGL-pages/basket.html"><i class="fas fa-shopping-basket fa-2x"></i><span class="basket-counter basket-items-count badge badge-light">3</span></a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+
+
+  <main id="main" class="container my-4">
+
+    <h1 class="form-row shop-name my-4">Basket</h1>
+
+    <h3 class="form-row">Products</h3>
+    <!-- The table of products in the basket -->
+    <div class="form-row">
+      <table id="basket-table" class="table table-striped">
+        <thead class="thead-dark">
+          <tr>
+            <th scope="col">Product Name</th>
+            <th scope="col">Amount</th>
+            <th scope="col">Price</th>
+          </tr>
+        </thead>
+        <!-- Contains the information of the products in the basket -->
+        <tbody>
+
+        </tbody>
+      </table>
+    </div>
+
+    <!-- Form for ordering -->
+    <form id="order" method="get" class="needs-validation my-4" novalidate>
+      <!-- name, address (street, number flat etc, city, zip), contact (number, email) -->
+
+      <h3 class="form-row my-0">Delivery details</h3>
+      <!-- Name and address -->
+      <div class="divider form-row bg-primary mb-2"></div>
+      <div class="form-group">
+        <label for="inputName">Name</label>
+        <input type="text" name="name" class="form-control" id="inputName" placeholder="e.g. John Doe" required>
+        <div class="invalid-feedback">
+          Please provide a Name!
+        </div>
+      </div>
+      <div class="form-group">
+        <label for="inputHouse">House Name or Number</label>
+        <input type="text" name="house" class="form-control" id="inputHouse" placeholder="e.g. Magnum House Flat E" required>
+        <div class="invalid-feedback">
+          Please provide a House Name or Number!
+        </div>
+      </div>
+      <div class="form-group">
+        <label for="inputStreet">Street Address</label>
+        <input type="text" name="street" class="form-control" id="inputStreet" placeholder="e.g. Perth Road" required>
+        <div class="invalid-feedback">
+          Please provide a Street Address!
+        </div>
+      </div>
+      <div class="form-row">
+        <div class="form-group col-6">
+          <label for="inputCity">City</label>
+          <input type="text" name="city" class="form-control" id="inputCity" placeholder="e.g. Dundee" required>
+          <div class="invalid-feedback">
+            Please provide a City!
+          </div>
+        </div>
+        <div class="form-group col-6">
+          <label for="inputZip">Postcode</label>
+          <input type="text" name="zip" class="form-control" id="inputZip" placeholder="e.g. DD2 1AE" required>
+          <div class="invalid-feedback">
+            Please provide a valid Postcode!
+          </div>
+        </div>
+        <div class="row mx-2">
+            <p>Expected delivery time: 2 - 3 days</p>
+        </div>
+      </div>
+
+      <h3 class="form-row my-0">Contact details</h3>
+      <!-- Phone and email -->
+      <div class="divider form-row bg-primary mb-2"></div>
+      <div class="form-group">
+        <label for="inputEmail">Email</label>
+        <input type="email" name="email" class="form-control" id="inputEmail" placeholder="e.g. johndoe@gmail.com" required>
+        <div class="invalid-feedback">
+          Please provide a valid Email Address!
+        </div>
+      </div>
+      <div class="form-group">
+        <label for="inputPhone">Phone Number</label>
+        <input type="tel" name="phone" class="form-control" id="inputPhone" placeholder="e.g. 07123456789" required>
+        <div class="invalid-feedback">
+          Please provide a valid Phone Number!
+        </div>
+      </div>
+      <div class="form-row justify-content-end my-4">
+        <button type="button" class="btn btn-lg btn-block btn-primary" onclick="sendOrder();">Send Order</button>
+      </div>
+    </form>
+  </main>
+
+  <footer>
+    <div class="footer p-1">
+      <div class="icons">
+        <a href="https://www.facebook.com/thelittlegreenlarder/" target="_blank"><em class="fab fa-facebook-square fa-2x"></em></a>
+        <a href="https://www.instagram.com/thelittlegreenlarder/" target="_blank"><em class="fab fa-instagram fa-2x"></em></a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Script for the page -->
+  <script src="../script/basket.js" charset="utf-8"></script>
+
+  <!-- Bootstrap javascripts -->
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+</body>
+
+
+</html>

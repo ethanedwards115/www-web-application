@@ -32,43 +32,68 @@
   <meta name="msapplication-TileImage" content="../pictures/ms-icon-144x144.png">
   <meta name="theme-color" content="#ffffff">
 
-  <!-- For icons -->
+  <!-- Mapbox -->
+  <script src='https://api.mapbox.com/mapbox-gl-js/v1.4.1/mapbox-gl.js'></script>
+  <link href='https://api.mapbox.com/mapbox-gl-js/v1.4.1/mapbox-gl.css' rel='stylesheet' />
+
+  <!-- Icons -->
   <script src="https://kit.fontawesome.com/6854d7f83d.js" crossorigin="anonymous"></script>
 
-  <title>The Little Green Larder</title>
+  <title>The Little Green Larder - Home</title>
 </head>
 
 <body class="min-vh-100">
-  <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
-    <a class="navbar-brand" href="#">The Little Green Larder</a>
+  <!-- The navbar -->
+  <nav class="navbar navbar-expand-md navbar-dark bg-primary">
+    <a class="navbar-brand" href="shop.html">The Little Green Larder</a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarColor01" aria-controls="navbarColor01" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
 
     <div class="collapse navbar-collapse" id="navbarColor01">
       <ul class="navbar-nav mr-auto">
-        <li class="nav-item active">
-          <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+        <li class="nav-item">
+          <a class="nav-link" href="../pages/home.html">Home</a>
+        </li>
+        <li>
+          <a class="nav-link active" href="shop.html">Shop<span class="sr-only">(current)</span></a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">Item 1</a>
+          <a class="nav-link" href="products.html">Products</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">Item 2</a>
+          <a class="nav-link" href="Shop-works.html">How the shop works</a>
         </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">Item 3</a>
+        <li class="nav-item d-md-none">
+          <a class="nav-link" href="basket.html">Basket<span class="basket-counter badge badge-light">0</span></a>
         </li>
       </ul>
-      <form class="form-inline my-2 my-lg-0">
-        <input class="form-control mr-sm-2" type="text" placeholder="Search">
-        <button class="btn btn-secondary my-2 my-sm-0" type="submit">Search</button>
-      </form>
+      <ul class="navbar-nav ml-auto mr-3">
+        <li class="nav-item">
+          <a class="basket-link nav-link d-none d-md-block" href="basket.html"><i class="fas fa-shopping-basket fa-2x"></i><span class="basket-counter basket-items-count badge badge-light">0</span></a>
+        </li>
+      </ul>
     </div>
   </nav>
 
-  <main class="container">
 
+  <main class="container my-4">
+    <h1 class="row my-4 mx-2 row-with-span">Welcome to <span class="shop-name">The Little <span class="green">Green</span> Larder</span></h1>
+
+    <!-- Picture and text describing the shop -->
+    <div class="row mx-2">
+      <img class="col-lg-6 p-0 pr-lg-2" src="../img/shop-front.jpg" alt="Picture of the store's front">
+      <p id="shoptext" class="col-lg-6 text-justify px-0 pt-2 pl-lg-2 py-lg-0">The Little Green Larder offers a plastic free shopping experience, with zero waste alternatives to inspire us to create a greener future. Fresh food, dried foods and whole
+        foods are all available, for you to fill into your own container. We also offer zero waste swaps for every day items. We are first store of its kind in Dundee, and hope we won’t be the last in implementing changes to help the environment.</p>
+    </div>
+
+    <!-- Map showing the location of the shop -->
+    <div class="row mx-2 my-4">
+      <h3 class="">We are here:</h3>
+      <div class="w-100">
+        <div id='map'></div>
+      </div>
+    </div>
   </main>
 
   <footer>
@@ -76,9 +101,12 @@
       <div class="icons">
         <a href="https://www.facebook.com/thelittlegreenlarder/" target="_blank"><em class="fab fa-facebook-square fa-2x"></em></a>
         <a href="https://www.instagram.com/thelittlegreenlarder/" target="_blank"><em class="fab fa-instagram fa-2x"></em></a>
-     </div>
+      </div>
     </div>
   </footer>
+
+  <!-- Script for map from https://docs.mapbox.com/help/tutorials/custom-markers-gl-js/ -->
+  <script src="../script/shop.js" charset="utf-8"></script>
 
   <!-- Bootstrap javascripts -->
   <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>

@@ -1,0 +1,58 @@
+#slides{
+    position: relative;
+    height: 300px;
+    padding: 100px;
+    margin: 100px;
+    list-style-type: none;
+}
+/*Controls the look and position of class slide, as well as the transition */
+.slide{
+    position: absolute;
+    left: 230px;
+    top: -50px;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    z-index: 1;
+
+    -webkit-transition: opacity 1s;
+    -moz-transition: opacity 1s;
+    -o-transition: opacity 1s;
+    transition: opacity 1s;
+}
+/*Set opacity and the stack*/
+.showing{
+    opacity: 1;
+    z-index: 2;
+}
+
+/* look and size of font, as well as the size of the images*/
+.slide{
+    font-size: 40px;
+    font-family: "Arial";
+    padding: 40px;
+    box-sizing: border-box;
+    background: #333;
+    color: #fff;
+    -webkit-text-stroke: 2px black;
+    height: 440px;
+    width: 440px;
+
+}
+
+/*This shows what displays on the slides, and stops the images from repeating */
+.slide:nth-of-type(1){
+  background-image: url('../img/sweets.jpg');
+
+  background-repeat: no-repeat;
+}
+.slide:nth-of-type(2){
+    background-image: url('../img/weight.png');
+
+    background-repeat: no-repeat;
+}
+.slide:nth-of-type(3){
+    background-image: url('../img/register.png');
+
+    background-repeat: no-repeat;
+}

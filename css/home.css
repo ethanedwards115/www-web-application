@@ -1,0 +1,19 @@
+/* The font for the title of the pages */
+@import url('https://fonts.googleapis.com/css?family=Alata&display=swap');
+
+/* specific css for the cards on the home page */
+.card {
+  height: 600px;
+  max-width: 400px;
+  margin: 0 auto;
+  transition: transform .1s;
+}
+
+/* css to give the cards the hover attribute */
+.card:hover {
+  -ms-transform: scale(1.1);
+  /* IE 9 */
+  -webkit-transform: scale(1.1);
+  /* Safari 3-8 */
+  transform: scale(1.1);
+}
